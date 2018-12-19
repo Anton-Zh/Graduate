@@ -3,9 +3,9 @@
   "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loftschool/advanced-boilerplate.git"
+    "url": "git+https://github.com/loftschool/advanced-boilerplate.git"
   },
-  "description": "",
+  "description": "Жалдак Антон",
   "main": "gulpfile.js",
   "scripts": {
     "dev:mpa": "cross-env NODE_ENV=development gulp",
@@ -74,5 +74,9 @@
     "request": "^2.87.0",
     "signale": "^1.1.0",
     "vue": "2.5.13"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/loftschool/advanced-boilerplate/issues"
+  },
+  "homepage": "https://github.com/loftschool/advanced-boilerplate#readme"
 }
