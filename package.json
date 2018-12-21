@@ -69,6 +69,7 @@
     "not ie <= 8"
   ],
   "dependencies": {
+    "gift": "^0.10.2",
     "normalize.css": "^7.0.0",
     "promptly": "^3.0.3",
     "pug": "^2.0.3",
