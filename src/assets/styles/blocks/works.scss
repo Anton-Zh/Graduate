@@ -1,0 +1,22 @@
+.works {
+  position: relative;
+
+  &__left { 
+    background: white;
+  }
+  &__right {
+    background: white;
+  }
+}
+
+.works__title {
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.works_header {
+  
+}
+

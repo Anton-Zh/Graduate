@@ -1,0 +1,44 @@
+.articles{
+  width: 90%;
+  
+}
+
+.article {
+  margin-top: 50px;
+  border-bottom: 3px solid $dark-grey; //почему-то не работает opasity, при любом значении линия пропадает
+
+  &:first-child {
+    margin-top: 0px;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.article__title {
+  justify-content: flex-start;
+  
+}
+
+.article__date {
+  margin-top: 30px;
+  color: $main;
+}
+
+.article__content {
+  margin-top: 30px;
+  &:last-child {
+    padding-bottom: 30px;
+  }
+}
+
+.article__pic {
+}
+
+.code-example {
+  margin-top: 30px;
+  padding-bottom: 50px;
+  width: 850px;
+  
+}

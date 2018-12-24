@@ -1,0 +1,33 @@
+
+.welcome__container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__top {
+  position: absolute;
+  top: calc(33 * 100 / 1200)%;
+  right: calc(100 * 100 / 1200)%;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.welcome__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(./assets/images/bg/bg-index.png) center center / cover no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.welcome__bot {
+  position: absolute;
+  bottom: 3%;
+}
