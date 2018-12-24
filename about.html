@@ -9,12 +9,276 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="maincontent">
-        <h1>Страничка "Обо Мне и еще много интересного"  </h1>
-        <h2>Я пытаюсь понять что делаю )</h2>
-      </div>
+      <!-- hero section-->
+      <section class="hero__container">
+        <div class="hero__socials">
+          <ul class="socials__list">
+            <li class="socials__item"><a class="socials__link" href="https://vk.com">
+                <svg class="social__img social__img--vk">
+                  <use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="https://github.com">
+                <svg class="social__img social__img--github">
+                  <use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="socials__item"><a class="socials__link" href="https://www.linkedin.com">
+                <svg class="social__img social__img--in">
+                  <use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="hero__menu">
+          <div class="burger-btn">
+            <div class="burger-btn__elem"></div>
+          </div>
+        </div>
+        <div class="hero__title">
+          <svg class="hero__pic hero__pic--portfolio_header">
+            <use xlink:href="./assets/images/icons/sprite.svg#portfolio_header"></use>
+          </svg>
+        </div>
+        <div class="hero__content">
+          <div class="user">
+            <div class="user-img__wrapper"><img class="user__img" src="./assets/images/avatar.jpg" alt="avatar pic"/>
+            </div><span class="user__name">Жалдак Антон</span><span class="user__spec">Личный сайт веб разработчика</span>
+          </div>
+        </div>
+        <div class="hero__arrow-down">
+          <svg class="arrow-down__pic arrow-down__pic--arrow_down">
+            <use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
+          </svg>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__left">
+          <div class="triangle">
+            <div class="triangle__left"></div>
+          </div>
+          <div class="about__left-title">
+            <div class="block-title">Обо мне
+              <svg class="about__pic about__pic--about_header">
+                <use xlink:href="./assets/images/icons/sprite.svg#about_header"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="about__left-content">
+            <div class="user-description">
+              <div class="user-description__image"><img class="user-description__avatar" src="./assets/images/avatar.jpg" alt=""/>
+              </div>
+              <div class="user-description__data">
+                <div class="user-description__title">
+                  <div class="block-subtitle">Кто я</div>
+                </div>
+                <div class="user-description__text">
+                  <p>Я веб разработчик из Москвы. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+                  <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.    Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about__right">
+          <div class="triangle">
+            <div class="triangle__right"></div>
+          </div>
+          <div class="about__right-title">
+            <div class="block-subtitle block-subtitle-margin-top">Чем я могу быть<br/> вам полезен</div>
+          </div>
+          <div class="about__right-description text-content text-content-right">
+            <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
+          </div>
+          <div class="about__right-content">
+            <ul class="skills-list">
+              <li class="skills-list__item skills-row">
+                <div class="skills-row__title">Frontend</div>
+                <ul class="skills-row__list">
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="50 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">Html5</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="50 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">css3</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="70 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">JavaScript &amp; jQuery</div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="skills-list__item skills-row">
+                <div class="skills-row__title">Backend</div>
+                <ul class="skills-row__list">
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="30 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">PHP</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="50 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">mysql</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="70 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">Node.js &amp; npm</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="70 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">MongoDB</div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="skills-list__item skills-row">
+                <div class="skills-row__title">Workflow</div>
+                <ul class="skills-row__list">
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="40 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">Git</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="50 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">Gulp</div>
+                    </div>
+                  </li>
+                  <li class="skills-row__item">
+                    <div class="skill" data-percents="100">
+                      <svg class="b-skill-svg" viewBox="0 0 100 100" width="100" height="100">
+                        <circle class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%"></circle>
+                        <circle class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray="10 360" transform="rotate(-90 50 50)"></circle>
+                      </svg>
+                      <div class="skill__title">Bower</div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="google-map"></div>
+        <div class="map__data">
+          <div class="contacts">
+            <h2 class="contacts__title">
+              <div class="block-subtitle">Контакты</div>
+            </h2>
+            <address class="contacts__data">
+              <ul class="contacts__list">
+                <li class="contacts__item contacts-row">
+                  <div class="contacts-row contacts__icon">
+                    <svg class="contacts__icon-img contacts__icon-img--skype">
+                      <use xlink:href="./assets/images/icons/sprite.svg#skype"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-row contacts__info">anton-zhaldak</div>
+                </li>
+                <li class="contacts__item contacts-row">
+                  <div class="contacts-row contacts__icon">
+                    <svg class="contacts__icon-img contacts__icon-img--phone">
+                      <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-row contacts__info">+79111111111</div>
+                </li>
+                <li class="contacts__item contacts-row">
+                  <div class="contacts-row contacts__icon">
+                    <svg class="contacts__icon-img contacts__icon-img--map_marker">
+                      <use xlink:href="./assets/images/icons/sprite.svg#map_marker"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-row contacts__info">#</div>
+                </li>
+                <li class="contacts__item contacts-row">
+                  <div class="contacts-row contacts__icon">
+                    <svg class="contacts__icon-img contacts__icon-img--envelope2">
+                      <use xlink:href="./assets/images/icons/sprite.svg#envelope2"></use>
+                    </svg>
+                  </div>
+                  <div class="contacts-row contacts__info">mail@mail.ru</div>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </section>
       <footer class="footer">
-        <h2>Copyright &copy;</h2>
+        <div class="footer__row"> 
+          <div class="footer__col">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">               <a class="menu__item-link menu__link" href="my-work.html">Мои работы</a></li>
+                <li class="menu__item">               <a class="menu__item-link menu__link" href="about.html">Обо мне</a></li>
+                <li class="menu__item">               <a class="menu__item-link menu__link" href="blog.html">Блог</a></li>
+                <li class="menu__item">               <a class="menu__item-link menu__link" href="#">Авторизация</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__col footer__col-right">
+            <ul class="socials__list">
+              <li class="socials__item socials__item-round"><a class="socials__link" href="https://vk.com">
+                  <svg class="social__img social__img--vk_round">
+                    <use xlink:href="./assets/images/icons/sprite.svg#vk_round"></use>
+                  </svg></a></li>
+              <li class="socials__item socials__item-round"><a class="socials__link" href="https://github.com">
+                  <svg class="social__img social__img--github_round">
+                    <use xlink:href="./assets/images/icons/sprite.svg#github_round"></use>
+                  </svg></a></li>
+              <li class="socials__item socials__item-round"><a class="socials__link" href="https://www.linkedin.com">
+                  <svg class="social__img social__img--in_round">
+                    <use xlink:href="./assets/images/icons/sprite.svg#in_round"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__col">
+            <p>Я веб разработчик из Москвы и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+          </div>
+          <div class="footer__col footer__col-right"><span>© Жалдак Антон | Создано с любовью в LoftSchool | 2018</span></div>
+        </div>
       </footer>
     </div>
     <script src="bootloader.bundle.js"></script>
