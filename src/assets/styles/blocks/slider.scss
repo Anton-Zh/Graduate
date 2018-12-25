@@ -1,50 +1,82 @@
-.slider__wrapper {
+// .slider__wrapper {
+//   display: flex;
+//   width: 100%;
+// }
+
+// .slider__col {
+//   width: 50%;
+//   height: 750px;
+
+//   &--left {
+//     background: $bg-color;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//   }
+//   &--right {
+//     background: $bg-color--dark;
+//   }
+// }
+
+// .slider__main {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   max-width: 902px;
+//   max-height: 525px
+// }
+
+// .slide__burgers {
+//   max-width: 643px;
+//   max-height: 416px;
+// }
+
+// .slide__list {
+
+//   display: flex;
+//   width: 902px;
+//   height: 226px;
+// }
+
+// .slide__btn {
+//   width: 451px;
+//   height: 226px;
+// }
+
+// .slide__btn-img {
+//   max-width: 337px;
+//   max-height: 200px;
+// }
+
+// по вебинару Ольги Болотовой
+
+.slider {
   display: flex;
-  width: 100%;
-}
-
-.slider__col {
-  width: 50%;
-  height: 750px;
-
-  &--left {
-    background: $bg-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  &--right {
-    background: $bg-color--dark;
-  }
-}
-
-.slider__main {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  max-width: 902px;
-  max-height: 525px;
+  justify-content: space-between;
+  height: 500px;
 
-}
+  &__wrapper {
+    width: 400px;
+  }
 
-.slide__burgers {
-  max-width: 643px;
-  max-height: 416px;
-}
+  &__main-slide {
+    background-color: brown;
+    height: 200px;
+    width: 100%;
+  }
 
-.slide__list {
-  width: 902px;
-  height: 226px;
-}
+  &__up-slide {
+    background-color: gold;
+    height: 200px;
+    width: 50%;
+  }
 
-.slide__btn {
-  width: 451px;
-  height: 226px;
-}
-
-.slide__btn-img {
-  max-width: 337px;
-  max-height: 200px;
+  &__down-slide {
+    background-color: green;
+    height: 200px;
+    width: 50%;
+  }
 }
 

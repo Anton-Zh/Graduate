@@ -18,10 +18,18 @@ block content
       .title-bg
         +icon('works_header', 'title__pic')
       h1.title Мои работы
-    .slider__wrapper
+
+    .slider.js-slider
+      .slider__description.js-description
+        .slider__wrapper
+          img.slider__main-slide.js-main-slide(alt='работа')
+          img.slider__up-slide.js-scroll-slide(alt='работа')
+          img.slider__down-slide.js-scroll-slide(alt='работа')
+
+    //- .slider__wrapper
       .slider__col.slider__col--left
         .slider__info.tools
-          h3.title.title--small.tools__title Сайт фитнес клуба
+          h3.title.title--small.tools__title Сайт бургеров
           .tools__list
             span.tools__name HTML, CSS, javascript
           a.tools__btn
