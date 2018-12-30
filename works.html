@@ -11,7 +11,7 @@
     <div class="wrapper">
       <!-- hero section-->
       <section class="hero__container">
-        <div class="hero__socials">
+        <div class="socials__block hero__socials">
           <ul class="socials__list">
             <li class="socials__item"><a class="socials__link" href="https://vk.com">
                 <svg class="social__img social__img--vk">
@@ -52,27 +52,27 @@
       <section class="works">
         <div class="works__left">
           <div class="triangle">
-            <div class="triangle__left triangle__left-white"></div>
+            <div class="triangle__left triangle__left--white"></div>
           </div>
         </div>
         <div class="works__right">
           <div class="triangle">
-            <div class="triangle__right triangle__right-white"></div>
+            <div class="triangle__right triangle__right--white"></div>
           </div>
         </div>
-        <div class="works__title">
+        <div class="works__title-box">
           <div class="title-bg">
             <svg class="title__pic title__pic--works_header">
               <use xlink:href="./assets/images/icons/sprite.svg#works_header"></use>
             </svg>
           </div>
-          <h1 class="title">Мои работы</h1>
+          <h1 class="title title--work">Мои работы</h1>
         </div>
         <div class="slider__wrapper">
           <div class="slider__col slider__col--left">
             <div class="slider__info tools">
-              <h3 class="title title--small tools__title">Сайт фитнес клуба</h3>
-              <div class="tools__list"><span class="tools__name">HTML, CSS, javascript</span></div><a class="tools__btn">
+              <h3 class="title title--small tools__title">Сайт бургеров</h3>
+              <div class="tools__list"><span class="tools__name">HTML, CSS, javascript</span></div><a class="tools__btn" href="">
                 <svg class="tools__btn-pic tools__btn-pic--link">
                   <use xlink:href="./assets/images/icons/sprite.svg#link"></use>
                 </svg><span class="tools__btn-text">Посмотреть сайт</span></a>
@@ -82,15 +82,15 @@
             <div class="slider__main"><img class="slide__img slide__burgers" src="./assets/images/works/burgers.png" alt="burgers"/>
             </div>
             <ul class="slider__list">
-              <li class="slider__btn slider__btn--prev"><img class="slide__img slide__btn-img" src="./assets/images/works/fitness.png" alt="fitness"/>
-                <svg class="slider__btn-pic slider__btn-pic--portf_arrow_down">
-                  <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
-                </svg>
+              <li class="slider__btn slider__btn--prev"><img class="slide__img slide__btn-img" src="./assets/images/works/fitness.png" alt="fitness"/><a class="slider__btn-pic-box" href="">
+                  <svg class="slider__btn-pic slider__btn-pic--portf_arrow_down">
+                    <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+                  </svg></a>
               </li>
-              <li class="slider__btn slider__btn--next"><img class="slide__img slide__btn-img" src="./assets/images/works/portfolio.png" alt="portfolio"/>
-                <svg class="slider__btn-pic slider__btn-pic--portf_arrow_up">
-                  <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
-                </svg>
+              <li class="slider__btn slider__btn--next"><img class="slide__img slide__btn-img" src="./assets/images/works/portfolio.png" alt="portfolio"/><a class="slider__btn-pic-box" href="">
+                  <svg class="slider__btn-pic slider__btn-pic--portf_arrow_up">
+                    <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
+                  </svg></a>
               </li>
             </ul>
           </div>
@@ -107,10 +107,58 @@
               </div>
               <h2 class="title reviews__title-text">Что обо мне говорят</h2>
             </div>
-            <div class="reviews__top-col"></div>
-            <div class="reviews__top-col"></div>
           </div>
-          <div class="reviews__bot"></div>
+          <div class="reviews__columns">
+            <div class="reviews__columns--left">
+              <div class="column__pic"> 
+                <svg class="column__pic-svg column__pic-svg--quote">
+                  <use xlink:href="./assets/images/icons/sprite.svg#quote"></use>
+                </svg>
+              </div>
+              <div class="column__text">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+              <div class="column__author"> 
+                <div class="column__author-pic"> <img class="undefined" src="./assets/images/DK.png" alt="author-pic--DK"/>
+                </div>
+                <div class="column__author-text">
+                  <div class="column__author-name">Ковальчук Дмитрий</div>
+                  <div class="column__author-description">основатель LoftSchool</div>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__columns--right">
+              <div class="column__pic"> 
+                <svg class="column__pic-svg column__pic-svg--quote">
+                  <use xlink:href="./assets/images/icons/sprite.svg#quote"></use>
+                </svg>
+              </div>
+              <div class="column__text">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+              <div class="column__author">
+                <div class="column__author-pic"> <img class="picture Vladimir" src="./assets/images/VS.png" alt="author-pic--VS"/>
+                </div>
+                <div class="column__author-text">
+                  <div class="column__author-name">Сабанцев Владимир</div>
+                  <div class="column__author-description">наставник</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reviews__form">
+            <div class="reviews__form-title">Связаться со мной</div>
+            <div class="reviews__form-data">
+              <input class="form__data form__data--name" type="text" alt="name" placeholder="Имя">
+              <input class="form__data form__data--email" type="email" alt="email" placeholder="E-mail">
+              <textarea class="form__data form__data--msg" name="Message" placeholder="Введите сообщение" alt="your massage" type="text"></textarea>
+            </div>
+            <div class="btn btn--form">
+              <button class="btn__send" type="subbmit">Отправить</button>
+              <button class="btn__clear" type="subbmit">Очистить</button>
+            </div>
+          </div>
+          <div class="hero__arrow-down arrow-up">
+            <svg class="arrow-down__pic arrow-down__pic--arrow_down">
+              <use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
+            </svg>
+          </div>
         </div>
       </section>
       <footer class="footer">
@@ -118,35 +166,37 @@
           <div class="footer__col">
             <nav class="menu">
               <ul class="menu__list">
-                <li class="menu__item">               <a class="menu__item-link menu__link" href="my-work.html">Мои работы</a></li>
+                <li class="menu__item">               <a class="menu__item-link menu__link" href="works.html">Мои работы</a></li>
                 <li class="menu__item">               <a class="menu__item-link menu__link" href="about.html">Обо мне</a></li>
                 <li class="menu__item">               <a class="menu__item-link menu__link" href="blog.html">Блог</a></li>
                 <li class="menu__item">               <a class="menu__item-link menu__link" href="#">Авторизация</a></li>
               </ul>
             </nav>
           </div>
-          <div class="footer__col footer__col-right">
-            <ul class="socials__list">
-              <li class="socials__item socials__item-round"><a class="socials__link" href="https://vk.com">
-                  <svg class="social__img social__img--vk_round">
-                    <use xlink:href="./assets/images/icons/sprite.svg#vk_round"></use>
-                  </svg></a></li>
-              <li class="socials__item socials__item-round"><a class="socials__link" href="https://github.com">
-                  <svg class="social__img social__img--github_round">
-                    <use xlink:href="./assets/images/icons/sprite.svg#github_round"></use>
-                  </svg></a></li>
-              <li class="socials__item socials__item-round"><a class="socials__link" href="https://www.linkedin.com">
-                  <svg class="social__img social__img--in_round">
-                    <use xlink:href="./assets/images/icons/sprite.svg#in_round"></use>
-                  </svg></a></li>
-            </ul>
+          <div class="footer__col footer__col--right">
+            <div class="socials__block footer__socials-list">
+              <ul class="socials__list">
+                <li class="socials__item socials__item-round"><a class="socials__link" href="https://vk.com">
+                    <svg class="social__img social__img--vk_round">
+                      <use xlink:href="./assets/images/icons/sprite.svg#vk_round"></use>
+                    </svg></a></li>
+                <li class="socials__item socials__item-round"><a class="socials__link" href="https://github.com">
+                    <svg class="social__img social__img--github_round">
+                      <use xlink:href="./assets/images/icons/sprite.svg#github_round"></use>
+                    </svg></a></li>
+                <li class="socials__item socials__item-round"><a class="socials__link" href="https://www.linkedin.com">
+                    <svg class="social__img social__img--in_round">
+                      <use xlink:href="./assets/images/icons/sprite.svg#in_round"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="footer__row">
           <div class="footer__col">
             <p>Я веб разработчик из Москвы и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
           </div>
-          <div class="footer__col footer__col-right"><span>© Жалдак Антон | Создано с любовью в LoftSchool | 2018</span></div>
+          <div class="footer__col footer__col--right"><span>© Жалдак Антон | Создано с любовью в LoftSchool | 2018</span></div>
         </div>
       </footer>
     </div>

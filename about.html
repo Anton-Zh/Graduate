@@ -11,7 +11,7 @@
     <div class="wrapper">
       <!-- hero section-->
       <section class="hero__container">
-        <div class="hero__socials">
+        <div class="socials__block hero__socials">
           <ul class="socials__list">
             <li class="socials__item"><a class="socials__link" href="https://vk.com">
                 <svg class="social__img social__img--vk">
@@ -55,7 +55,7 @@
             <div class="triangle__left"></div>
           </div>
           <div class="about__left-title">
-            <div class="block-title">Обо мне
+            <div class="block-title title">Обо мне
               <svg class="about__pic about__pic--about_header">
                 <use xlink:href="./assets/images/icons/sprite.svg#about_header"></use>
               </svg>
@@ -67,7 +67,7 @@
               </div>
               <div class="user-description__data">
                 <div class="user-description__title">
-                  <div class="block-subtitle">Кто я</div>
+                  <div class="block-subtitle title">Кто я</div>
                 </div>
                 <div class="user-description__text">
                   <p>Я веб разработчик из Москвы. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
@@ -79,12 +79,12 @@
         </div>
         <div class="about__right">
           <div class="triangle">
-            <div class="triangle__right"></div>
+            <div class="triangle__right triangle__right--about"></div>
           </div>
           <div class="about__right-title">
-            <div class="block-subtitle block-subtitle-margin-top">Чем я могу быть<br/> вам полезен</div>
+            <div class="block-subtitle title block-subtitle--servises">Чем я могу быть<br/> вам полезен</div>
           </div>
-          <div class="about__right-description text-content text-content-right">
+          <div class="about__right-description text-content text-content--right">
             <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
           </div>
           <div class="about__right-content">
@@ -199,11 +199,11 @@
         </div>
       </section>
       <section class="map">
-        <div class="google-map"></div>
+        <div class="google-map" id="mapozqrctmv"></div>
         <div class="map__data">
           <div class="contacts">
             <h2 class="contacts__title">
-              <div class="block-subtitle">Контакты</div>
+              <div class="block-subtitle title">Контакты</div>
             </h2>
             <address class="contacts__data">
               <ul class="contacts__list">
@@ -221,7 +221,7 @@
                       <use xlink:href="./assets/images/icons/sprite.svg#phone"></use>
                     </svg>
                   </div>
-                  <div class="contacts-row contacts__info">+79111111111</div>
+                  <div class="contacts-row contacts__info">+7985-395-1343</div>
                 </li>
                 <li class="contacts__item contacts-row">
                   <div class="contacts-row contacts__icon">
@@ -229,7 +229,7 @@
                       <use xlink:href="./assets/images/icons/sprite.svg#map_marker"></use>
                     </svg>
                   </div>
-                  <div class="contacts-row contacts__info">#</div>
+                  <div class="contacts-row contacts__info">г.Балашиха, мкр. 1 Мая</div>
                 </li>
                 <li class="contacts__item contacts-row">
                   <div class="contacts-row contacts__icon">
@@ -237,7 +237,7 @@
                       <use xlink:href="./assets/images/icons/sprite.svg#envelope2"></use>
                     </svg>
                   </div>
-                  <div class="contacts-row contacts__info">mail@mail.ru</div>
+                  <div class="contacts-row contacts__info">istin87@mail.ru</div>
                 </li>
               </ul>
             </address>
@@ -249,40 +249,43 @@
           <div class="footer__col">
             <nav class="menu">
               <ul class="menu__list">
-                <li class="menu__item">               <a class="menu__item-link menu__link" href="my-work.html">Мои работы</a></li>
+                <li class="menu__item">               <a class="menu__item-link menu__link" href="works.html">Мои работы</a></li>
                 <li class="menu__item">               <a class="menu__item-link menu__link" href="about.html">Обо мне</a></li>
                 <li class="menu__item">               <a class="menu__item-link menu__link" href="blog.html">Блог</a></li>
                 <li class="menu__item">               <a class="menu__item-link menu__link" href="#">Авторизация</a></li>
               </ul>
             </nav>
           </div>
-          <div class="footer__col footer__col-right">
-            <ul class="socials__list">
-              <li class="socials__item socials__item-round"><a class="socials__link" href="https://vk.com">
-                  <svg class="social__img social__img--vk_round">
-                    <use xlink:href="./assets/images/icons/sprite.svg#vk_round"></use>
-                  </svg></a></li>
-              <li class="socials__item socials__item-round"><a class="socials__link" href="https://github.com">
-                  <svg class="social__img social__img--github_round">
-                    <use xlink:href="./assets/images/icons/sprite.svg#github_round"></use>
-                  </svg></a></li>
-              <li class="socials__item socials__item-round"><a class="socials__link" href="https://www.linkedin.com">
-                  <svg class="social__img social__img--in_round">
-                    <use xlink:href="./assets/images/icons/sprite.svg#in_round"></use>
-                  </svg></a></li>
-            </ul>
+          <div class="footer__col footer__col--right">
+            <div class="socials__block footer__socials-list">
+              <ul class="socials__list">
+                <li class="socials__item socials__item-round"><a class="socials__link" href="https://vk.com">
+                    <svg class="social__img social__img--vk_round">
+                      <use xlink:href="./assets/images/icons/sprite.svg#vk_round"></use>
+                    </svg></a></li>
+                <li class="socials__item socials__item-round"><a class="socials__link" href="https://github.com">
+                    <svg class="social__img social__img--github_round">
+                      <use xlink:href="./assets/images/icons/sprite.svg#github_round"></use>
+                    </svg></a></li>
+                <li class="socials__item socials__item-round"><a class="socials__link" href="https://www.linkedin.com">
+                    <svg class="social__img social__img--in_round">
+                      <use xlink:href="./assets/images/icons/sprite.svg#in_round"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="footer__row">
           <div class="footer__col">
             <p>Я веб разработчик из Москвы и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
           </div>
-          <div class="footer__col footer__col-right"><span>© Жалдак Антон | Создано с любовью в LoftSchool | 2018</span></div>
+          <div class="footer__col footer__col--right"><span>© Жалдак Антон | Создано с любовью в LoftSchool | 2018</span></div>
         </div>
       </footer>
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>
     <script src="about.bundle.js"></script>
+    <script src="parallax.js"></script>
   </body>
 </html>

@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
-    <div class="wrapper">
+    <div class="wrapper welcome">
       <div class="welcome__container">
         <div class="welcome__top">
-          <button class="btn__auth"><span>Авторизоваться</span></button>
+          <div class="btn">
+            <button class="btn__auth"><span>Авторизоваться</span></button>
+          </div>
         </div>
         <main class="welcome__content">
           <article class="profile-block">
@@ -45,6 +47,56 @@
               </nav>
             </div>
           </article>
+          <article class="profile-block profile-block--authorization">
+            <div class="profile-block__top profile-block__top--authorization">
+              <div class="login__box">
+                <div class="login__box-title title block-subtitle">Авторизуйтесь</div>
+                <div class="login__data">
+                  <div class="data__box">
+                    <div class="data__svg">
+                      <svg class="data-name-pic data-name-pic--login">
+                        <use xlink:href="./assets/images/icons/sprite.svg#login"></use>
+                      </svg>
+                    </div>
+                    <input class="login__data-input" type="text" placeholder="Логин">
+                  </div>
+                  <div class="data__box">
+                    <div class="data__svg">
+                      <svg class="data-pass-pic data-pass-pic--password">
+                        <use xlink:href="./assets/images/icons/sprite.svg#password"></use>
+                      </svg>
+                    </div>
+                    <input class="login__data-input" type="text" placeholder="Пароль">
+                  </div>
+                </div>
+                <div class="login__validation">
+                  <div class="validation__block">
+                    <label class="validation__block-checkbox">
+                      <input class="validation-input" type="checkbox">
+                      <div class="checkbox-visible"></div>
+                      <div class="checkbox-title"><span>Я человек</span></div>
+                    </label>
+                  </div>
+                  <div class="validation__block--robot">
+                    <div class="validation__block-title">Вы точно не робот?
+                      <div class="radio__buttons">
+                        <label class="radio__buttons__label">
+                          <input class="radio__mark" name="human" type="radio"><span class="radio__mark-fake"></span><span class="radio__mark-text">Да</span>
+                        </label>
+                        <label class="radio__buttons__label">
+                          <input class="radio__mark" name="human" type="radio"><span class="radio__mark-fake"></span><span class="radio__mark-text">Не уверен</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="validation__buttons btn--form">
+              <button class="login__button--main">На главную</button>
+              <button class="login__button--entry">Войти</button>
+            </div>
+          </article>
         </main>
         <div class="welcome__bot">
           <p class="copyright welcome__copyright">© Жалдак Антон | создано с любовью в LoftSchool | 2018</p>
@@ -52,5 +104,6 @@
       </div>
     </div>
     <script src="auth.bundle.js"></script>
+    <script src="./modules/parallax.js"></script>
   </body>
 </html>
