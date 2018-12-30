@@ -2,12 +2,19 @@
   display: flex;
   margin-left: 25px;
   font-family: Roboto-Regular;
+  @include phones {
+    margin-left: 10px;
+    font-size: 14px;
+  }
 }
 
 .menu__item {
   margin-right: 25px;
   &:last-child() {
       margin-right: 0;
+  }
+  @include phones {
+    margin-right: 10px;
   }
 }
 

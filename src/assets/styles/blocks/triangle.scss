@@ -9,7 +9,7 @@
   background: #fff;
   background: linear-gradient( to top right, $bg-color 0%, $bg-color 50%, transparent calc(50% + 1px), transparent 100%);
   z-index: 0;
-  &-white {
+  &--white {
     background: linear-gradient( to top right, white 0%, white 50%, transparent calc(50% + 1px), transparent 100%);
   }
 }
@@ -24,10 +24,13 @@
   bottom: 100%;
   background: #fff;
   background: linear-gradient( to top left, $bg-color--dark 0%, $bg-color--dark 50%, transparent calc(50% + 1px), transparent 100%);
-  &-blog {
-    background: linear-gradient( to top left, $bg-color 0%, $bg-color 50%, transparent calc(50% + 1px), transparent 100%);
-  }
-  &-white {
+  &--white {
     background: linear-gradient( to top left, white 0%, white 50%, transparent calc(50% + 1px), transparent 100%);
+    
+  }
+  &--about {
+    @include tablets {
+      background: linear-gradient( to top left, $bg-color 0%, $bg-color 50%, transparent calc(50% + 1px), transparent 100%);
+    }
   }
 }

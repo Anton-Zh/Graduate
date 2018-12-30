@@ -2,19 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'BERNIERRegular-Regular';
-  font-size: 63px;
+  font-family: $font-Bern;
   color: $dark-grey;
   line-height: 1;
 
+  @include phones {
+    font-size: 35px;
+  }
 
-  &::before,
-  &::after {
-    content: '';
+  &--work {
+    font-size: 63px;
+    @include phones {
+      font-size: 35px;
+    }
+  }
+
+  &:before, &:after {
+    content: "";
     display: block;
-    width: calc(22 / 16)rem;
-    height: calc(5 / 16)rem;
-    //margin-top: 7%;
+    height: 5px;
+    width: 22px;
     background-color: $dark-grey;
     opacity: .2;
   }
@@ -29,6 +36,9 @@
 
   &--small {
     font-size: 35px;
+    @include phones {
+      font-size: 21px;
+    }
   }
 }
 
@@ -41,6 +51,12 @@
   height: 165px;
   width: 506px;
   transform: translateY(-36%);
+
+  @include phones {
+    width: 253px;
+    height: 83px;
+    top: 28px;
+  }
 }
 
 .title__pic {

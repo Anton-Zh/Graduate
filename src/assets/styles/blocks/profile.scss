@@ -8,6 +8,12 @@
   border-radius: 5px;
   background-color: #fff;
   opacity: .85;
+  &--authorization {
+    display: none;
+  }
+  @include phones {
+    width: 95%;
+  }
 }
 
 .profile-block__top {
@@ -15,6 +21,13 @@
   flex-direction: column;
   width: 100%;
   padding: 40px 66px;
+  &--authorization {
+    padding: 40px 40px;
+  }
+  @include phones {
+    padding: 20px 33px;
+  }
+  
 }
 
 .profile-block__bot {
@@ -23,4 +36,7 @@
 
 .profile__socials {
   margin-top: 35px;
+  @include phones {
+    margin-top: 15px;
+  }
 }

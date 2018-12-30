@@ -13,3 +13,34 @@
     color: $main;
   }
 }
+
+.btn--form {
+  display: flex;  
+
+  & button{
+    height: 45px;
+    width: 190px;
+    background: $main;
+    color: #fff;
+    text-align: center;
+    font-family: $font-RR;
+    
+    &:hover {
+      background: $secondary;
+    }
+    @include phones {
+      width: 150px;
+    }
+  }
+}
+
+.btn__send {
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid #f1f1f294;
+}
+
+.btn__clear {
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid #f1f1f294;
+
+}

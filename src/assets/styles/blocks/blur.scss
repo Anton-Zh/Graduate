@@ -1,0 +1,21 @@
+.blur__img {
+  display: block;
+  min-width: 100%;
+}
+
+.blur__form {
+  width: 100%;
+  height: 100%;
+  background: url(.assets/image/water.png) center no-repeat;
+  // filter: blur(20px);
+}
+
+.blur__form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  margin-left: -150px;
+
+}

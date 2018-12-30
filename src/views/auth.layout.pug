@@ -1,5 +1,7 @@
 include ./common/_mixins
 
+
+
 doctype html
 html(lang="ru")
   head
@@ -9,20 +11,20 @@ html(lang="ru")
     title Portfolio | welcome page
     link(rel="stylesheet", href="main.min.css")
   body
-    .wrapper
-      .welcome
-        .welcome__container
-          .welcome__top
-            .buttons
-              button.btn__auth
-                span Авторизоваться
+    .wrapper.welcome
+      .welcome__container
+        .welcome__top
+          .btn
+            button.btn__auth
+              span Авторизоваться
 
-          main.welcome__content
-            block profile
+        main.welcome__content
+          block profile
+          
+          block login
 
-          .welcome__bot
-            p.copyright.welcome__copyright © Жалдак Антон | создано с любовью в LoftSchool | 2018
-
-    
+        .welcome__bot
+          p.copyright.welcome__copyright © Жалдак Антон | создано с любовью в LoftSchool | 2018
 
     script(src="auth.bundle.js")
+    script(src="./modules/parallax.js")

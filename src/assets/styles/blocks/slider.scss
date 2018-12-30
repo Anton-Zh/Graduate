@@ -1,82 +1,197 @@
-// .slider__wrapper {
-//   display: flex;
-//   width: 100%;
-// }
+.slider__wrapper {
+  display: flex;
+  width: 100%;
+  height: 750px;
 
-// .slider__col {
-//   width: 50%;
-//   height: 750px;
+  @include tablets {
+    flex-direction: column-reverse;
+  }
+  @include phones {
+    height: auto;
+  }
+}
 
-//   &--left {
-//     background: $bg-color;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//   }
-//   &--right {
-//     background: $bg-color--dark;
-//   }
-// }
+.slider__col {
+  width: 50%;
+  height: 750px;
 
-// .slider__main {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   max-width: 902px;
-//   max-height: 525px
-// }
+  &--left {
+    background: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &--right {
+    background: $bg-color--dark;
+  }
 
-// .slide__burgers {
-//   max-width: 643px;
-//   max-height: 416px;
-// }
+  @include tablets {
+    width: 100%;
+  }
+  @include phones {
+    height: auto;
+  }
+}
 
-// .slide__list {
+.slider__main {
+  height: 525px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // max-width: 902px;
+  max-height: 525px;
 
-//   display: flex;
-//   width: 902px;
-//   height: 226px;
-// }
+  @include tablets {
+    margin-bottom: 270px;
+  }
 
-// .slide__btn {
-//   width: 451px;
-//   height: 226px;
-// }
+  @include phones {
+    height: 257px;
+    margin-bottom: 220px;
+  }
+  
+}
 
-// .slide__btn-img {
-//   max-width: 337px;
-//   max-height: 200px;
-// }
+.slider__list {
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include phones {
+    height: 94px;
+  }
+  
+}
+
+.slider__btn {
+  width: 451px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @include phones {
+    width: 160px;
+    height: 94px;
+  }
+ 
+  &-pic {
+    position: absolute;
+    width: 26px;
+    height: 16px;
+    fill: white;
+    &-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(182, 180, 174, 0.7);
+      &:hover {
+        background-color: rgba(182, 180, 174, 0.3);
+        & .slider__btn-pic {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.slide__burgers {
+  max-width: 643px;
+  max-height: 416px;
+
+  @include phones {
+    width: 246px;
+  }
+}
+
+.slide__list {
+  display: flex;
+  width: 902px;
+  height: 226px;
+}
+
+.slide__btn {
+  width: 451px;
+  height: 226px;
+
+  &-pic {
+    fill: white;
+  }
+
+  
+  
+}
+
+
+.slide__btn-img {
+  max-width: 337px;
+  max-height: 200px;
+  @include phones {
+    width: 160px;
+    height: 94px;
+
+  }
+}
+
+.slider__info.tools {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets {
+    // margin-top: 0px;
+    width: 100%;
+    background: $bg-color;
+    z-index: 1;
+    margin-top: -180px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    height: 270px;
+    // margin-bottom: 0px;
+  }
+  @include phones {
+    height: 220px;
+    margin-top: -408px;
+  }
+}
 
 // по вебинару Ольги Болотовой
 
-.slider {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 500px;
+// .slider {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   height: 500px;
 
-  &__wrapper {
-    width: 400px;
-  }
+//   &__wrapper {
+//     width: 400px;
+//   }
 
-  &__main-slide {
-    background-color: brown;
-    height: 200px;
-    width: 100%;
-  }
+//   &__main-slide {
+//     background-color: brown;
+//     height: 200px;
+//     width: 100%;
+//   }
 
-  &__up-slide {
-    background-color: gold;
-    height: 200px;
-    width: 50%;
-  }
+//   &__up-slide {
+//     background-color: gold;
+//     height: 200px;
+//     width: 50%;
+//   }
 
-  &__down-slide {
-    background-color: green;
-    height: 200px;
-    width: 50%;
-  }
-}
+//   &__down-slide {
+//     background-color: green;
+//     height: 200px;
+//     width: 50%;
+//   }
+// }
 

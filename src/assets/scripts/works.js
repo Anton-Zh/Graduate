@@ -1,1 +1,1 @@
-// import "./modules/slider.js";
+// import "./modules/parallax.js";

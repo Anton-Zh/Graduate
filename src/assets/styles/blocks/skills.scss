@@ -1,10 +1,22 @@
 .skills-list {
   margin-left: 37px;
   margin-top: -20px;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @include phones {
+    margin-left: 0;
+  }
 }
 
 .skills-row__list {
   display: flex;
+  @include tablets {
+    margin-top: 20px;
+  }
 }
 
 .skills-row__title {
@@ -14,6 +26,12 @@
   font-weight: 500;
   position: relative;
   margin-top: 36px;
+  @include tablets {
+    margin-top: 50px;
+  }
+  @include phones {
+    margin-top: 20px;
+  }
 }
 
 .skill__title {
