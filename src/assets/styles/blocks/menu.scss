@@ -1,0 +1,20 @@
+.menu__list {
+  display: flex;
+  margin-left: 25px;
+  font-family: Roboto-Regular;
+}
+
+.menu__item {
+  margin-right: 25px;
+  &:last-child() {
+      margin-right: 0;
+  }
+}
+
+.menu__item-link {
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    color: $main;
+  }
+}

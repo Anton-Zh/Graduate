@@ -1,0 +1,28 @@
+.reviews {
+  background: url(./assets/images/bg/bg-reviews.png) center center / cover no-repeat;
+}
+
+.reviews__top {
+  height: 100vh;
+}
+
+.reviews__bot {
+  display: flex;
+  height: 100vh;
+}
+
+.reviews__title {
+  position: relative;
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.reviews__title-text {
+  margin-top: 30px;
+  width: 30%;
+  text-align: center;
+  
+}

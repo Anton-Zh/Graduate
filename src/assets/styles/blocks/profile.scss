@@ -1,0 +1,26 @@
+.profile-block {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  width: auto;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #fff;
+  opacity: .85;
+}
+
+.profile-block__top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 40px 66px;
+}
+
+.profile-block__bot {
+  width: 100%;
+}
+
+.profile__socials {
+  margin-top: 35px;
+}

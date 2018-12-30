@@ -1,0 +1,65 @@
+.socials__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.socials__item {
+  height: 100%;
+  padding: 0 15px;
+    &-round {
+      padding: 0 10px;
+    }
+}
+
+.socials__link {
+  height: 100%;
+  width: 100%;
+}
+
+.social__img {
+  cursor: pointer;
+  fill: white;
+  opacity: .5;
+  transition: all .3s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--vk {
+    width: 31px;
+    height: 17px;
+
+    &_round {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &--github {
+    width: 26px;
+    height: 22px;
+
+    &_round {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &--in {
+    width: 24px;
+    height: 22px;
+
+    &_round {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.social__img--fill-main {
+  fill: $main;
+}
+

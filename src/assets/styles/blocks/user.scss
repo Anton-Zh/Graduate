@@ -1,0 +1,70 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+}
+
+.user-img__wrapper {
+  display: flex;
+  justify-content: center;
+  width: 141px;
+  height: 141px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.user__img {
+  max-height: 100%;
+  transform: scale(1.4); 
+}
+
+.user__name {
+  font-family: 'Roboto-Medium';
+  font-size: calc(28 / 16)rem;
+  margin-bottom: 9px;
+}
+
+.user__spec {
+  font-family: 'Roboto-Light';
+  font-size: 1rem;
+  opacity: .8;
+}
+
+.user__spec--ff-regular {
+  font-family: 'Roboto-Regular';
+}
+
+.user__textcolor--dark {
+  color: $text-color;
+}
+
+.user-description__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-description__title {
+  margin-top: 20px;
+}
+
+.user-description__text {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  width: 80%;
+}
+
+.user-description__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-description__avatar {
+  max-height: 300px;
+  max-width: 443px;
+}

@@ -1,0 +1,15 @@
+.map{
+  background: url("./assets/images/bg/bg-map.png") center center /cover no-repeat;
+  height: 600px;
+}
+
+.google-map{
+  height: 25%;
+}
+
+.map__data{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
