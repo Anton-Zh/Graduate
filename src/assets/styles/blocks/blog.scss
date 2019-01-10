@@ -70,13 +70,34 @@
 }
 
 .sidebar {
+  // width: 100%;
+  // display: flex;
+  // z-index: 100;
   @include tablets {
     display: none;
   }
+  &--active {
+    display: none;
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid $text-color;
+    background-color: $main;
+    z-index: 3;
+    @include phones {
+      display: flex;
+    }
+
+  }
 }
 
-.sidebar__list {
- width: 80%;
+.sidebar__list { 
+  &--active { 
+  padding-top: 50px;
+  }
+  width: 100%;
 }
 
 .sidebar__item {
@@ -90,6 +111,15 @@
 
   &:hover {
     border-right: 3px solid $main;
+    @include phones {
+      border-right: 3px solid #fff;
+    }
+  }
+  &:active {
+    border-right: 3px solid $main;
+    @include phones {
+      border-right: 3px solid $text-color;
+    }
   }
 }
 
@@ -99,6 +129,52 @@
   
   &:hover {
     color: $main;
+    @include phones {
+      color: #fff;
+    }
+  }
+  &:active {
+    color: $main;
+    @include phones {
+      color: $text-color;
+    }
+  }
+}
+
+.sidebar__phone {
+  display: none;
+
+  @include tablets {
+    display: none;
+  }
+
+  @include phones {
+    display: block;
+    &--front {
+      position: fixed;
+      left: 0;
+      bottom: 50%;
+      top: 35%;
+      border-radius: 100%;
+      width: 30px;
+      height: 60px;
+      background-color: $main;
+      z-index: 1;
+      margin-left: -20px;
+    }
+
+    &--back {
+      position: fixed;
+      left: 0;
+      bottom: 50%;
+      height: 70px;
+      top: 34.3%;
+      border-radius: 100%;
+      width: 38px;
+      z-index: 0;
+      margin-left: -25px;
+      background-color: $text-color;
+    }
   }
 }
 
@@ -106,8 +182,7 @@
   width: 70%;
   display: flex;
   justify-content: center;
-  @include tablets {
-    width: 100%;
-  }
+    @include tablets {
+      width: 100%;
+    }
 }
-

@@ -1,1 +1,2 @@
-// import "./modules/parallax.js";
+// import "./modules/parallax";
+import "./modules/hamburger";

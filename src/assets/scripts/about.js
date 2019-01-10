@@ -1,2 +1,4 @@
-import "./modules/blur.js";
+import "./modules/blur";
+import "./modules/map";
+import "./modules/hamburger";
 

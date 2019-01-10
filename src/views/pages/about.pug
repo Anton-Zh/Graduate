@@ -3,6 +3,11 @@ extends ../main.layout.pug
 block variables
   - var title = 'Обо мне'
 
+block scripts
+  script(src="https://api-maps.yandex.ru/2.1/?apikey=<c71c6db4-43f2-4989-b508-477717514549>&lang=ru_RU" type="text/javascript")
+  script(src='about.bundle.js')
+  
+
 block content
 
   include ../common/hero.pug
@@ -10,7 +15,7 @@ block content
   section.about
     .about__left
       .triangle
-        .triangle__left
+        .triangle__left.triangle__left--about
       .about__left-title
         .block-title.title Обо мне
           +icon('about_header', 'about__pic')
@@ -33,51 +38,52 @@ block content
         .block-subtitle.title.block-subtitle--servises Чем я могу быть<br/> вам полезен
       .about__right-description.text-content.text-content--right
         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-      .about__right-content
-        -
-          var skills = [
-            ['Frontend', [['Html5', 50], ['css3', 50], ['JavaScript & jQuery', 70]]],
-            ['Backend', [['PHP', 30], ['mysql', 50], ['Node.js & npm', 70],['MongoDB', 70]]],
-            ['Workflow', [['Git', 40], ['Gulp', 50], ['Bower', 10]]],
-          ]
-        ul.skills-list
-          each skillsrow in skills
-            li.skills-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
-              ul.skills-row__list
-                each skill in skillsrow[1]
-                  li.skills-row__item
-                    .skill(data-percents="100")
-                      svg(viewBox="0 0 100 100" width="100" height="100").b-skill-svg
-                        circle(class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%")
-                        circle(class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray=`${skill[1]} 360` transform="rotate(-90 50 50)")
-                      .skill__title #{skill[0]}
+      #skills-component
+      //- .about__right-content
+      //-   -
+      //-     var skills = [
+      //-       ['Frontend', [['Html5', 50], ['css3', 50], ['JavaScript & jQuery', 70]]],
+      //-       ['Backend', [['PHP', 30], ['mysql', 50], ['Node.js & npm', 70],['MongoDB', 70]]],
+      //-       ['Workflow', [['Git', 40], ['Gulp', 50], ['Bower', 10]]],
+      //-     ]
+      //-   ul.skills-list
+      //-     each skillsrow in skills
+      //-       li.skills-list__item.skills-row
+      //-         .skills-row__title #{skillsrow[0]}
+      //-         ul.skills-row__list
+      //-           each skill in skillsrow[1]
+      //-             li.skills-row__item
+      //-               .skill(data-percents="100")
+      //-                 svg(viewBox="0 0 100 100" width="100" height="100").b-skill-svg
+      //-                   circle(class="b-skill-svg__circle-base" r="38" cx="50%" cy="50%")
+      //-                   circle(class="b-skill-svg__circle-progress" r="38" cx="50%" cy="50%" stroke-dasharray=`${skill[1]} 360` transform="rotate(-90 50 50)")
+      //-                 .skill__title #{skill[0]}
 
-  section.map
-    .google-map#mapozqrctmv
-    .map__data
-      .contacts
-        h2.contacts__title
-          .block-subtitle.title Контакты
-        address.contacts__data
-          ul.contacts__list
-            -
-              var contacts = [
-                ['skype', 'anton-zhaldak'],
-                ['phone', '+7985-395-1343'],
-                ['map_marker', 'г.Балашиха, мкр. 1 Мая'],
-                ['envelope2', 'istin87@mail.ru']
-              ]
-            each item in contacts
-              li.contacts__item.contacts-row
-                .contacts-row.contacts__icon
-                  +icon(item[0], 'contacts__icon-img')
-                .contacts-row.contacts__info #{item[1]}
+  section.map#map
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35877.99747264143!2d37.80817793639438!3d55.8040926168531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ4JzE0LjciTiAzN8KwNTAnMzUuNSJF!5e0!3m2!1sru!2sru!4v1547027092782" width="100%" height="935" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    .google-map
+      .map__data
+        .contacts
+          h2.contacts__title
+            .block-subtitle.title Контакты
+          address.contacts__data
+            ul.contacts__list
+              -
+                var contacts = [
+                  ['skype', 'anton-zhaldak'],
+                  ['phone', '+7985-395-1343'],
+                  ['map_marker', 'г.Балашиха, мкр. 1 Мая'],
+                  ['envelope2', 'istin87@mail.ru']
+                ]
+              each item in contacts
+                li.contacts__item.contacts-row
+                  .contacts-row.contacts__icon
+                    +icon(item[0], 'contacts__icon-img')
+                  .contacts-row.contacts__info #{item[1]}
 
   //- include ../common/footer.pug
 
 
-block scripts
-  script(src='about.bundle.js')
-  //- script(src!="//maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=GoogleReadyHandlerozqrctmv" async defer)
-  script(src='parallax.js')
+
+  

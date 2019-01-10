@@ -1,16 +1,26 @@
 .profile-block {
   display: flex;
+  position: absolute;
   flex-direction: column;
   margin: auto;
   align-items: center;
-  width: auto;
+  width: -moz-available;;
   justify-content: space-between;
   border-radius: 5px;
   background-color: #fff;
+  backface-visibility: hidden;
+  overflow: hidden;
   opacity: .85;
+  transform: rotateY(0deg) translateZ(10px);
+  
+  z-index: 10;
   &--authorization {
-    display: none;
-  }
+    
+    display: flex;
+    position: absolute;
+    transform: rotateY(-180deg);
+    
+   }
   @include phones {
     width: 95%;
   }

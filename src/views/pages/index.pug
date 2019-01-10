@@ -34,7 +34,7 @@ block profile
         ul.nav__list
           each link in links
             li.nav__item
-              a.nav__link(href=`${link.href}.html`) #{link.name}
+              button.nav__link(href=`${link.href}.html`) #{link.name}
 
 block login
   article.profile-block.profile-block--authorization

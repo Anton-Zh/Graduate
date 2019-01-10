@@ -11,6 +11,10 @@
   z-index: 0;
   &--white {
     background: linear-gradient( to top right, white 0%, white 50%, transparent calc(50% + 1px), transparent 100%);
+    z-index: 2;
+  }
+  &--about {
+    z-index: 2;
   }
 }
 
@@ -26,9 +30,10 @@
   background: linear-gradient( to top left, $bg-color--dark 0%, $bg-color--dark 50%, transparent calc(50% + 1px), transparent 100%);
   &--white {
     background: linear-gradient( to top left, white 0%, white 50%, transparent calc(50% + 1px), transparent 100%);
-    
+    z-index: 2;
   }
   &--about {
+    z-index: 2;
     @include tablets {
       background: linear-gradient( to top left, $bg-color 0%, $bg-color 50%, transparent calc(50% + 1px), transparent 100%);
     }

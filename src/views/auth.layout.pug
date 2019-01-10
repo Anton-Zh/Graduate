@@ -19,12 +19,12 @@ html(lang="ru")
               span Авторизоваться
 
         main.welcome__content
-          block profile
-          
-          block login
+          .flip-container(ontouchstart="this.classList.toggle('hover');")
+            .flipper
+              block profile
+              block login
 
         .welcome__bot
           p.copyright.welcome__copyright © Жалдак Антон | создано с любовью в LoftSchool | 2018
 
     script(src="auth.bundle.js")
-    script(src="./modules/parallax.js")

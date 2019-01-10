@@ -1,17 +1,23 @@
-.articles{
+.articles {
   width: 90%;
 }
 
 .article {
-  margin-top: 50px;
-
+  margin-top: 10px;
+  margin-bottom: 50px;
+  
   &:first-child {
     margin-top: 0px;
   }
+ 
   @include tablets {
      &:last-child {
-    margin-bottom: 250px;
+    margin-bottom: 50px;
      }
+  }
+
+  @include phones {
+    padding-bottom: 20px;
   }
 
   &:after {
@@ -23,6 +29,7 @@
 
     @include tablets {
       width: 691px;
+      
     }
 
     &:last-child {
@@ -35,6 +42,7 @@
 
 .article__title {
   justify-content: flex-start;
+  
 }
 
 .article__date {
@@ -65,9 +73,10 @@
 
 .code-example-pic {
   margin-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   width: 850px;
   @include tablets {
     width: 691px;
   }
 }
+

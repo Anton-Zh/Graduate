@@ -13,10 +13,24 @@ html(lang="ru")
 
   body
     .wrapper
+      .burger__menu--active
+        ul.burger__list
+          li.burger__item
+            a.burger__link(href="#") Мои работы
+          li.burger__item
+            a.burger__link(href="#") Блог
+          li.burger__item
+            a.burger__link(href="#") Обо мне
+          li.burger__item
+            a.burger__link(href="#") Авторизация 
+
       block content
 
       include ./common/footer.pug
+      include ./components/entry.pug
 
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')
+    
     block scripts
