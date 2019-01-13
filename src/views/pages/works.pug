@@ -50,6 +50,8 @@ block content
               +icon('portf_arrow_up', 'slider__btn-pic')
 
   section.reviews
+    .rew__background
+          +image('bg/bg-reviews.png', 'water', 'rew__img')
     .reviews__container
       .reviews__top
         .reviews__title
@@ -77,22 +79,21 @@ block content
             .column__author-text
               .column__author-name Сабанцев Владимир
               .column__author-description наставник
-      //- .blur
-      //-   .blur__background
-      //-     +image('water.png', 'water', 'blur__img')
+        
       //-   .blur__form-wrapper
       //-     .blur__form
-      .reviews__form
-        .reviews__form-title Связаться со мной
-        .reviews__form-data
-          input.form__data.form__data--name(type="text" alt="name" placeholder="Имя")
-          input.form__data.form__data--email(type="email" alt="email" placeholder="E-mail")
-          textarea.form__data.form__data--msg(name="Message" placeholder="Введите сообщение" alt="your massage" type="text")
-        .btn.btn--form
-          button.btn__send(type="subbmit") Отправить
-          button.btn__clear(type="subbmit") Очистить
+      .reviews__form-wrapper
+        .reviews__form
+          .reviews__form-title Связаться со мной
+          .reviews__form-data
+            input.form__data.form__data--name(type="text" alt="name" placeholder="Имя")
+            input.form__data.form__data--email(type="email" alt="email" placeholder="E-mail")
+            textarea.form__data.form__data--msg(name="Message" placeholder="Введите сообщение" alt="your massage" type="text")
+          .btn.btn--form
+            button.btn__send(type="subbmit") Отправить
+            button.btn__clear(type="subbmit") Очистить
       .hero__arrow-down.arrow-up
         +icon('arrow_down', 'arrow-down__pic')          
 
 block scripts
-  script(src='about.bundle.js')
+  script(src='works.bundle.js')

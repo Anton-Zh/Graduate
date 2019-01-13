@@ -51,6 +51,9 @@
   height: 165px;
   width: 506px;
   transform: translateY(-36%);
+  @include tablets {
+    top: 34px;
+  }
 
   @include phones {
     width: 253px;

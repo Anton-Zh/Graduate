@@ -2,12 +2,12 @@ import $ from "jquery"
 
 $().ready(function(){
 
-  let activeDrop = "burger--open";
+  let activeDrop = "btn__auth--active";
 
-  let btn = $('.burger__menu');
-  let change = $('.burger-btn__elem');
-  let activeChange ="burger-btn__elem--active";
-  let dropMenu = $('.burger__menu--active');
+  let btn = $('.btn__auth');
+  let change = $('.flip-container');
+  let activeChange ="flip-container--active";
+  let dropMenu = $('.btn__auth--active');
 
   btn.click(function(event){
     event.preventDefault();

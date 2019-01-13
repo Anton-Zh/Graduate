@@ -21,8 +21,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablets {
+    padding-bottom: 50px;
+  }
   @include phones {
     height: 95px;
+    padding-bottom: 0;
   }
   
 }

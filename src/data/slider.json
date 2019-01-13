@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title" : "Сайт <Коворкинг>",
+    "skills" : "1 Html, Css, JavaScript",
+    "photo" : "assets/images/work-page/big_works.png",
+    "link" : "//google.com"
+  },
+  {
+    "id": 2,
+    "title" : "Landing-page <mr.Burger> ",
+    "skills" : "Html, Css, JavaScript",
+    "photo" : "/assets/images/work-page/small_work.png",
+    "link" : "//yandex.ru"
+  },
+  {
+    "id": 3,
+    "title" : "Сайт школы онлайн образования",
+    "skills" : "3 Html, Css, JavaScript",
+    "photo" : "/assets/images/work-page/small_work2.png",
+    "link" : "//rambler.ru"
+  },
+  {
+    "id": 4,
+    "title" : "Сайт школы онлайн образования",
+    "skills" : "Html, Css, JavaScript",
+    "photo" : "assets/images/work-page/big_works.png",
+    "link" : "//vk.com"
+  }
+]

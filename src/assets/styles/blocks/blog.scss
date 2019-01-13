@@ -65,33 +65,46 @@
   justify-content: center;
   align-items: flex-start;
   @include tablets {
-    width: 0px;
+    // display: contents;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: $main;
+    z-index: 4;
+    border-right: 1px solid $text-color;
+    margin-left: -375px;
+    
+    &--active  {
+      transition: .5s ease-in-out;
+      margin-left: 0;
+    }
+  }
+  @include phones {
+    width: 80%;
   }
 }
 
 .sidebar {
-  // width: 100%;
-  // display: flex;
-  // z-index: 100;
+  // убрал абсолютное позц на desktop (залазит на hero)
   @include tablets {
-    display: none;
-  }
-  &--active {
-    display: none;
-    width: 250px;
     position: fixed;
+    top: 30px;
     left: 0;
-    top: 0;
-    bottom: 0;
-    border-right: 1px solid $text-color;
-    background-color: $main;
-    z-index: 3;
-    @include phones {
-      display: flex;
+    z-index: 5;
+    width: inherit;
+    margin-left: -375px;
+    &--active {
+      transition: .5s ease-in-out;
+      margin-left: 0;
     }
-
   }
+  @include phones {
+    width: 80%;
+  }
+
 }
+
 
 .sidebar__list { 
   &--active { 
@@ -111,13 +124,13 @@
 
   &:hover {
     border-right: 3px solid $main;
-    @include phones {
+    @include tablets {
       border-right: 3px solid #fff;
     }
   }
   &:active {
     border-right: 3px solid $main;
-    @include phones {
+    @include tablets {
       border-right: 3px solid $text-color;
     }
   }
@@ -129,51 +142,45 @@
   
   &:hover {
     color: $main;
-    @include phones {
+    @include tablets {
       color: #fff;
     }
   }
   &:active {
     color: $main;
-    @include phones {
+    @include tablets {
       color: $text-color;
     }
   }
 }
 
-.sidebar__phone {
+.sidebar__menu {
   display: none;
 
   @include tablets {
-    display: none;
-  }
-
-  @include phones {
     display: block;
-    &--front {
-      position: fixed;
-      left: 0;
-      bottom: 50%;
-      top: 35%;
-      border-radius: 100%;
-      width: 30px;
-      height: 60px;
-      background-color: $main;
-      z-index: 1;
-      margin-left: -20px;
-    }
+    position: fixed;
+    left: 0%;
+    bottom: 50%;
+    top: 35%;
+    border-radius: 100%;
+    width: 30px;
+    height: 60px;
+    background-color: $main;
+    z-index: 3;
+    margin-left: -20px;   
+    box-shadow: 0px 0px 5px 2px #000000;
 
-    &--back {
-      position: fixed;
-      left: 0;
-      bottom: 50%;
-      height: 70px;
-      top: 34.3%;
-      border-radius: 100%;
-      width: 38px;
-      z-index: 0;
-      margin-left: -25px;
-      background-color: $text-color;
+    &--active {
+      left: 50%;
+      transition: .5s ease-in-out;
+    }
+    
+  }
+  @include phones {
+    &--active {
+      left: 80%;
+      transition: .5s ease-in-out;
     }
   }
 }

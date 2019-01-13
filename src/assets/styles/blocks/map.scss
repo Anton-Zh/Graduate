@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   // background: url("./assets/images/bg/bg-map.png") center center /cover no-repeat;
-  // height: 973px;
+  height: 973px;
   
   @include phones {
     // background: url("./assets/images/bg/bg-map.png") 100% /cover no-repeat;
@@ -12,7 +12,11 @@
 
 .google-map{
   position: absolute;
-  // height: 25%;
+  z-index: 1;
+  height: 20%;
+  @include tablets {
+    height: 15%;
+  }
   @include phones {
     height: 0%;
   }

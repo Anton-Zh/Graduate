@@ -1,0 +1,53 @@
+.preloader{
+  position: fixed; 
+  left: 0; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  background: rgba(14,9,53, .9); 
+  z-index: 100; 
+}
+.preloader__percent{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.preloader__block{
+  position: relative;
+  width: 50%;
+  left: 45%;
+  top: 40%;
+  height: 50%;
+
+}
+.preloader-ball{
+  position: relative;
+  text-align: center;
+  top: 15%;
+  width: 10px;
+  height: 10px;
+  border-radius:50px; 
+
+  animation: ball .9s linear infinite;
+  transform-origin: 55px;
+  background: white;
+}
+.preloader-line{
+   width: 100px; 
+   height: 100px;
+   border-radius: 50%;
+   box-shadow: 2px 2px 1px 0px #fff;
+   animation: ball 1.3s linear infinite;  }
+
+
+
+@keyframes ball {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}
+
+@keyframes circle {
+  from { transform:rotate(0deg); }
+  to { transform:rotate(360deg); }
+}

@@ -1,2 +1,3 @@
-// import "./modules/parallax";
 import "./modules/hamburger";
+import "./modules/blur";
+// import "./modules/slider";

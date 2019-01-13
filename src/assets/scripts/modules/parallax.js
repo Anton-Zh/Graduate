@@ -9,7 +9,7 @@ var parallax = (function () {
       var transformString = 'translate3d(0,' + strafe + ', 0)';
       var style = block.style;
 
-      var style = block.style;
+      // var style = block.style;
 
       style.transform = transformString;
       style.webkitTransform = transformString;

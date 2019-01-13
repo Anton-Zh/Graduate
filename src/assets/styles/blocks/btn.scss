@@ -12,6 +12,9 @@
     background-color: #fff;
     color: $main;
   }
+  &--active {
+    opacity: 0;
+  }
 }
 
 .btn--form {
