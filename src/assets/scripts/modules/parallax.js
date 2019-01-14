@@ -1,34 +1,31 @@
-var parallax = (function () {
-  var bg = document.querySelector('.hero__container');
-  var user = document.querySelector('.hero__pic--portfolio_header');
-  var sectionText = document.querySelector('.user__img');
+(function () {
 
-  return {
-    move: function (block, windowScroll, strafeAmount) {
-      var strafe = windowScroll / strafeAmount + '%';
-      var transformString = 'translate3d(0,' + strafe + ', 0)';
-      var style = block.style;
+  let parallax = (function () {
+    let bg = document.querySelector('.js_hero__bg');
+    let bgText = document.querySelector('.js_hero__title');
+    let user = document.querySelector('.js_hero__content');
 
-      // var style = block.style;
+    return {
+      move(block, windowScroll, strafeAmount) {
+        let strafe = windowScroll / -strafeAmount + '%';
+        let style = block.style;
+        let transformString = `translate3d(0, ${strafe}, 0)`;
 
-      style.transform = transformString;
-      style.webkitTransform = transformString;
+        style.transform = transformString;
+        style.webkitTransform = transformString;
+      },
 
-      style.top = strafe;
-    },
-
-    init: function (wScroll) {
-      this.move(bg, wScroll, 45);
-      this.move(sectionText, wScroll, 20);
-      this.move(user, wScroll, 3);
-
+      init(wScroll) {
+        this.move(bg, wScroll, 100);
+        this.move(bgText, wScroll, 40);
+        this.move(user, wScroll, 5);
+      }
     }
-  }
+  })();
 
-}());
+  window.onscroll = function () {
+    let wScroll = window.pageYOffset;
 
-window.onscroll = function () {
-  var wScroll =window.pageYOffset;
-  
-  parallax.init(wScroll);
-}
+    parallax.init(wScroll);
+  };
+})();

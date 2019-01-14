@@ -8,6 +8,7 @@ block content
   include ../common/hero.pug
 
   section.works
+    .anchor#anchor
     .works__left
       .triangle
         .triangle__left.triangle__left--white
@@ -18,7 +19,9 @@ block content
       .title-bg
         +icon('works_header', 'title__pic')
       h1.title.title--work Мои работы
-
+    
+    .slider__box
+      #slider-component
     //- .slider.js-slider
     //-   .slider__description.js-description
     //-     .slider__wrapper
@@ -49,9 +52,9 @@ block content
             a.slider__btn-pic-box(href='')
               +icon('portf_arrow_up', 'slider__btn-pic')
 
-  section.reviews
+  section.reviews#reviews
     .rew__background
-          +image('bg/bg-reviews.png', 'water', 'rew__img')
+      +image('bg/bg-reviews.png', 'water', 'rew__img')
     .reviews__container
       .reviews__top
         .reviews__title
@@ -92,7 +95,7 @@ block content
           .btn.btn--form
             button.btn__send(type="subbmit") Отправить
             button.btn__clear(type="subbmit") Очистить
-      .hero__arrow-down.arrow-up
+      a.hero__arrow-down.arrow-up(href="#reviews")
         +icon('arrow_down', 'arrow-down__pic')          
 
 block scripts

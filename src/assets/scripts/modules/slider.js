@@ -1,63 +1,106 @@
-const slides = [
-  {
-    title: 'Афродита',
-    image: './assets/images/works/fitness.png',
-    description: 'Фитнесс-Центр',
-    tags: [html, css],
-    link: ''
-  },
-  {
-    title: 'Mister Burger',
-    image: './assets/images/works/burgers.png',
-    description: 'Бургерная',
-    tags: [html, css, java-script],
-    link: ''
-  },
-  {
-    title: 'Сайт-портфолио',
-    image: './assets/images/works/portfolio.png',
-    description: 'Мой сайт-портфолио',
-    tags: [html, css, js, vue, gulp, webpuck, pug],
-    link: ''
+import Vue from 'vue';
+
+const info = {
+  template: "#slider-info",
+  props:{
+    work: Object
   }
-];
-
-const slider = document.querySelector('.js-slider');
-const mainSlide = document.querySelector('.js-main-slide');
-const upSlide = document.querySelector('.js-sroll-up');
-const downSlide = document.querySelector('.js-scroll-down');
-const descriptionSlide = document.querySelector('.js-description');
-const slideLength = slides.length;
-let currentSlide = 0;
-
-function slideLimiter(value) {
-  if (value => slideLength) {
-    return 0;
-  } else if (value < 0) {
-    return slideLength - 1;
-  } else {
-    return value;
+};
+const display = {
+  template: "#slider-display",
+  props:{
+    work: Object
   }
-}
+};
+const btns = {
+  template: "#slider-btns",
+  props:{
+    works: Array,
+    index: Number
+  },
+  data(){
+    return{
+      prevWorks: [],
+      nextWorks: []
+    };
+  },
+  created(){
+    this.prevWorks = this.arrForBtn("prev");
+    this.nextWorks = this.arrForBtn("next");
+  },
+  methods:{
+    arrForBtn(btnDirection){
+      const worksArray = [...this.works];
+      const last = worksArray[worksArray.length-1];
 
-function fillSlider() {
-  let prev = slideLimiter(currentSlide - 1);
-  let next = slideLimiter(currentSlide + 1);
+      switch(btnDirection){
+      case 'next':{
+      worksArray.push(worksArray[0]);
+      worksArray.shift();
+      break;
+      }
+      case 'prev':{
+        worksArray.unshift(last);
+        worksArray.pop();
+      break;
+      }
+    }
+      return worksArray;
+    } ,
+    slide(direction){
+      this.$emit("slide",direction);
+    }
+  }  
+};
+new Vue({
+  el: "#slider-component",
+    components: {
+    info, display, btns
+  },
+  data(){
+    return{
+      works: [],
+      currentIndex: 0
+    };
+  },
+  computed:{
+    currentWork(){
+      return this.works[this.currentIndex]
+    }
+  },
+  watch:{
+    currentIndex(value){
+    this.loop(value)
+    }
+  },
+ 
+  created(){
+    const data =  require('../../../data/slider.json');
+    this.works = data;
+  }, 
+  methods:{
+      handleSlide(direction){
+      switch(direction){
+        case "next":
+          this.currentIndex = this.currentIndex + 1;
+        break;
+        case "prev" :
+          this.currentIndex = this.currentIndex - 1;
+        break;
+      }
+  },
+    loop(value){
+      const minusOne = this.works.length -1;
+      if (value> minusOne) {
+        this.currentIndex = 0
+      }
 
-  mainSlide.scr = slides[currentSlide].image;
-  upSlide.setAttribute('src', slides[prev].image);
-  downSlide.src = slides[next].image;
-  description.innerText = slides[next].description;
-}
+      if(value < 0){
+        this.currentIndex = minusOne
+      } 
+    }
+  },
+  
 
-upSlide.addEventListener('click', function() {
-  currentSlide = slideLimiter(currentSlide - 1);
-  fillSlider();
+  template: "#slider-root"
 });
-
-downSlide.addEventListener('click', function() {
-  currentSlide = slideLimiter(currentSlide + 1);
-  fillSlider();
-});
-
-fillSlider();

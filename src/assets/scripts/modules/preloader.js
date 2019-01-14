@@ -1,6 +1,48 @@
-import $ from "jquery"
+// declarate variables
+const preloader = document.querySelector('.js_preloader');
+const rounds = document.querySelector('.js_preloader__img');
+const progress = document.querySelector('.js_preloader__progress');
+const images = Array.from(document.querySelectorAll("img"));
+const imagesCount = images.length;
+const initStrokeDashOffset = 439;
+let loadedImg = 0;
 
-$(window).on('load', function () {
-  $('#wrapper').css("opacity", "1"); // показываем блок с контентом 
-  $('#preloader').delay(350).fadeOut('slow'); // и скрываем сам блок прелоудера.
+
+// if container is exist get promise
+const preloaderPromise = new Promise(function (resolve) {
+  if (preloader) {
+    resolve();
+  }
+});
+
+preloaderPromise.then(function () {
+
+  // images.forEach(imageLoaded);
+  for (let i = 0; i < images.length; i++) {
+    let img = images[i];
+    img = new Image();
+    img.src = images[i].src;
+    img.onload = imageLoaded;
+  }
+
+
+  function imageLoaded() {
+    loadedImg++;
+    
+    const curStrokeDashArray = Math.round(initStrokeDashOffset / imagesCount * loadedImg);
+    rounds.style.strokeDashoffset = initStrokeDashOffset - curStrokeDashArray;
+
+    const percent = Math.round(100 / imagesCount * loadedImg);
+    progress.innerHTML = percent;
+  
+    console.log(progress.innerHTML);
+    
+    if (loadedImg >= imagesCount) {
+      setTimeout(function () {
+        if (!preloader.classList.contains('done')) {
+          preloader.classList.add('done');
+        }
+      }, 2000);
+    }
+  }
 });
