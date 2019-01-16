@@ -13,7 +13,10 @@
   height: 141px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 36px;
+  @include phones {
+    margin-bottom: 16px;
+  }
 }
 
 .user__img {
@@ -56,6 +59,15 @@
   margin-top: 20px;
   padding-bottom: 20px;
   width: 80%;
+  @include phones {
+    width: 90%;
+    & p {
+      margin-top: 10px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .user-description__image {

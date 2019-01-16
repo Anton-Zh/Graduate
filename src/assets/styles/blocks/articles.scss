@@ -1,18 +1,42 @@
-.articles{
+.articles {
   width: 90%;
-  
 }
 
 .article {
-  margin-top: 50px;
-  border-bottom: 3px solid $dark-grey; //почему-то не работает opasity, при любом значении линия пропадает
-
+  margin-top: 10px;
+  margin-bottom: 50px;
+  
   &:first-child {
     margin-top: 0px;
   }
+ 
+  @include tablets {
+     &:last-child {
+    margin-bottom: 50px;
+     }
+  }
 
-  &:last-child {
-    border-bottom: none;
+  @include phones {
+    padding-bottom: 20px;
+  }
+
+  &:after {
+    content: "";
+    width: 850px;
+    height: 5px;
+    background-color: rgba(#f1f1f2, 0.5);
+    position: absolute;
+
+    @include tablets {
+      width: 691px;
+      
+    }
+
+    &:last-child {
+      position: none;
+      content: "fff";
+      // height: 20px;
+    }
   }
 }
 
@@ -22,8 +46,13 @@
 }
 
 .article__date {
+  display: flex;
   margin-top: 30px;
   color: $main;
+}
+
+.article__time {
+  margin-left: 10px;
 }
 
 .article__content {
@@ -31,14 +60,23 @@
   &:last-child {
     padding-bottom: 30px;
   }
+  & p {
+    margin-top: 30px;
+  }
 }
 
-.article__pic {
+.code-example-box {
+  @include tablets {
+    max-width: 768px;
+  }
 }
 
-.code-example {
+.code-example-pic {
   margin-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   width: 850px;
-  
+  @include tablets {
+    width: 691px;
+  }
 }
+

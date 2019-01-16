@@ -1,0 +1,34 @@
+
+block login
+  article.profile-block.profile-block--authorization
+    .profile-block__top
+      .login__box
+        .login__box-title.subtitle Авторизуйтесь
+        .login__data
+          .login__data-name
+            +icon('login', 'data-name-pic')
+            input.login__data-text
+          .login__data-pass
+            +icon('password', 'data-pass-pic')
+            input.login__data-pass
+        .login__validation__buttons
+          .button__block
+            label.form__buttons-checkbox
+              input(type="checkbox").form-input.form-input--button
+              .checkbox-visible
+              .checkbox-title
+                span Я человек
+          .button__block
+            .button__rdb-title Вы точно не робот?
+            label.form__buttons-radio
+              input(type="radio").form-input.form-input--button
+              .radio-visible
+              .radio-title
+                span Да
+            label.form__buttons-radio
+              input(type="radio" ).form-input.form-input--button
+              .radio-visible
+              .radio-title
+                span Не уверен
+        button.login-button(href="index.html") На главную
+        button.login-button(href="#") Войти

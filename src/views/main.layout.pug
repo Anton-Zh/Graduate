@@ -12,11 +12,26 @@ html(lang="ru")
     link(rel='stylesheet' href='main.min.css')
 
   body
+    //- include ./common/preloader.pug
     .wrapper
+      .burger__menu--active
+        ul.burger__list
+          li.burger__item
+            a.burger__link(href="works.html") Мои работы
+          li.burger__item
+            a.burger__link(href="blog.html") Блог
+          li.burger__item
+            a.burger__link(href="about.html") Обо мне
+          li.burger__item
+            a.burger__link(href="index.html") Авторизация 
+
       block content
 
       include ./common/footer.pug
+      include ./components/entry.pug
 
+    //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
     script(src='bootloader.bundle.js')
     script(src='vendor.bundle.js')
+    
     block scripts

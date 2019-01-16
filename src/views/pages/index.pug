@@ -34,4 +34,53 @@ block profile
         ul.nav__list
           each link in links
             li.nav__item
-              a.nav__link(href=`${link.href}.html`) #{link.name}
+              button.nav__link(type="subbmit" href=`${link.href}.html`) #{link.name}
+
+block login
+  article.profile-block.profile-block--authorization
+    .profile-block__top.profile-block__top--authorization
+      .login__box
+        .login__box-title.title.block-subtitle Авторизуйтесь
+        .login__data
+          .data__box
+            .data__svg
+              +icon('login', 'data-name-pic')
+            input(type="text" placeholder="Логин").login__data-input
+          .data__box
+            .data__svg
+              +icon('password', 'data-pass-pic')
+            input(type="text" placeholder="Пароль").login__data-input
+        .login__validation
+          .validation__block
+            label.validation__block-checkbox
+              input(type="checkbox").validation-input
+              .checkbox-visible
+              .checkbox-title
+                span Я человек
+          .validation__block--robot
+            .validation__block-title Вы точно не робот?
+              .radio__buttons
+                label.radio__buttons__label
+                  input(name="human" type="radio").radio__mark
+                  span.radio__mark-fake
+                  span.radio__mark-text Да
+                label.radio__buttons__label
+                  input(name="human" type="radio").radio__mark
+                  span.radio__mark-fake
+                  span.radio__mark-text Не уверен
+    .validation__buttons.btn--form
+      button.login__button--main На главную
+      button.login__button--entry Войти
+
+    //- .profile-block__bot
+      -
+        var links = [
+          { name: 'Мои работы', href: 'works'},
+          { name: 'Обо мне', href: 'about'}
+        ]
+
+      nav.nav
+        ul.nav__list
+          each link in links
+            li.nav__item
+          a.nav__link(href=`${link.href}.html`) #{link.name}

@@ -1,16 +1,42 @@
 .about {
   display: flex;
   position: relative;
+  @include tablets {
+    flex-direction: column;
+  }
+  @include phones {
+    // height: 3287px;
+    height: auto;
+  }
 }
 
 .about__left {
   width: 50%;
-background: $bg-color;
+  background: $bg-color;
+  @include tablets {
+    width: 100%;
+    // min-width: 835px;
+  }
 }
 
 .about__right {
   width: 50%;
   background: $bg-color--dark;
+  @include tablets {
+    width: 100%;
+    text-align: center;
+    min-height: 793px;
+  }
+  &-description {
+    @include tablets {
+    }
+    
+  }
+  &--title {
+    @include tablets {
+      
+    }
+  }
 }
 
 .about__pic {
@@ -21,11 +47,17 @@ background: $bg-color;
   z-index: 0;
   position: absolute;
   top: -40px;
+  @include tablets {
+    top: -20px;
+  }
+  @include phones {
+    top: -10px;
+    
+  }
 }
 
-
 .block-title {
-  font-family: "BERNIERRegular-Regular";
+  font-family: "$font-Bern";
   font-size: 63px;
   font-weight: 400;
   line-height: 66px;
@@ -34,16 +66,17 @@ background: $bg-color;
   display: flex;
   justify-content: center;
   margin-bottom: 0px;
-
   height: 125px;
   position: relative;
   z-index: 1;
-  
+  @include phones {
+    height: 85px;
+  }
 }
 
 .block-subtitle {
   color: $text-color;
-  font-family: "BERNIERRegular-Regular";
+  font-family: "$font-Bern";
   font-size: 35px;
   font-weight: 400;
   line-height: 41.01px;
@@ -52,12 +85,17 @@ background: $bg-color;
   justify-content: center;
   //margin-top: 49px;
   position: relative;
-  
 }
 
-.block-subtitle-margin-top {
+.block-subtitle--servises {
   text-align: center;
   margin-top: 8px;
+  @include tablets {
+    margin-top: 50px;
+  }
+  @include phones {
+    margin-top: 20px;
+  }
 }
 
 .text-content {
@@ -70,10 +108,30 @@ background: $bg-color;
   margin-left: 80px;
   width: 80%;
   padding-bottom: 20px;
+  @include tablets {
+    text-align: center;
+    margin-left: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-.text-content-right {
+.text-content--right {
   width: 100%;
   margin-left: 40px;
   width: 81%;
+  @include tablets {
+    display: flex;
+    margin-left: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 84%;
+  }  
+  @include phones {
+    width: 90%;
+    margin-left: 16px;
+  
+  }
 }
