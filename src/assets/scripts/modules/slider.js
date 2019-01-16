@@ -2,105 +2,105 @@ import Vue from 'vue';
 
 const info = {
   template: "#slider-info",
-  props:{
+  props: {
     work: Object
   }
 };
+
 const display = {
   template: "#slider-display",
-  props:{
+  props: {
     work: Object
   }
 };
+
 const btns = {
   template: "#slider-btns",
-  props:{
+  props: {
     works: Array,
     index: Number
   },
-  data(){
-    return{
-      prevWorks: [],
-      nextWorks: []
-    };
+  data() {
+    return {
+      prevBtnWorks: [],
+      nextBtnWorks: []
+    }
   },
-  created(){
-    this.prevWorks = this.arrForBtn("prev");
-    this.nextWorks = this.arrForBtn("next");
+  created() {
+    this.prevBtnWorks = this.transformWorksArrForBtn('prev');
+    this.nextBtnWorks = this.transformWorksArrForBtn('next');
   },
-  methods:{
-    arrForBtn(btnDirection){
+  methods: {
+    slide(direction) {
+      this.$emit('slide', direction);
+    },
+    transformWorksArrForBtn(btnDirection) {
       const worksArray = [...this.works];
-      const last = worksArray[worksArray.length-1];
+      const lastItem = worksArray[worksArray.length - 1];
 
-      switch(btnDirection){
-      case 'next':{
-      worksArray.push(worksArray[0]);
-      worksArray.shift();
-      break;
+      switch (btnDirection) {
+        case 'next' :
+          worksArray.push(worksArray[0]);
+          worksArray.shift();
+          break;
+
+        case 'prev' :
+          worksArray.unshift(lastItem);
+          worksArray.pop();
+          break;
       }
-      case 'prev':{
-        worksArray.unshift(last);
-        worksArray.pop();
-      break;
-      }
-    }
+
       return worksArray;
-    } ,
-    slide(direction){
-      this.$emit("slide",direction);
     }
-  }  
+  }
 };
+
 new Vue({
   el: "#slider-component",
-    components: {
-    info, display, btns
+  components: {
+    info: info, display, btns
   },
-  data(){
-    return{
+  data() {
+    return {
       works: [],
       currentIndex: 0
-    };
+    }
   },
-  computed:{
-    currentWork(){
+  computed: {
+    currentWork() {
       return this.works[this.currentIndex]
     }
   },
-  watch:{
-    currentIndex(value){
-    this.loop(value)
+  watch: {
+    currentIndex(value) {
+      this.makeInfiniteSliding(value);
     }
   },
- 
-  created(){
-    const data =  require('../../../data/slider.json');
-    this.works = data;
-  }, 
-  methods:{
-      handleSlide(direction){
-      switch(direction){
-        case "next":
-          this.currentIndex = this.currentIndex + 1;
-        break;
+  created() {
+    this.works = require('../../../data/works.json');
+  },
+  methods: {
+    makeInfiniteSliding(value) {
+      const worksAmountMinusOne = this.works.length - 1;
+
+      if (value > worksAmountMinusOne) {
+        this.currentIndex = 0;
+      }
+
+      if (value < 0) {
+        this.currentIndex = worksAmountMinusOne;
+      }
+    },
+    handleSlide(direction) {
+      switch (direction) {
+        case "next" :
+          this.currentIndex += 1;
+          break
         case "prev" :
-          this.currentIndex = this.currentIndex - 1;
-        break;
+          this.currentIndex -= 1;
+          break
       }
-  },
-    loop(value){
-      const minusOne = this.works.length -1;
-      if (value> minusOne) {
-        this.currentIndex = 0
-      }
-
-      if(value < 0){
-        this.currentIndex = minusOne
-      } 
     }
   },
-  
-
   template: "#slider-root"
 });

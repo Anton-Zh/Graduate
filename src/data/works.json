@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Фитнесс 'Афродита'",
+    "tools": "html, css",
+    "photo": "./assets/images/works/fitness.png",
+    "link": "https://github.com/#"
+  },
+  {
+    "title": "Landing page 'Burgers'",
+    "tools": "html, css, javascript",
+    "photo": "./assets/images/works/burgers.png",
+    "link": "https://github.com/#"
+  },
+  {
+    "title": "Сайт Портфолио 'Горы'",
+    "tools": "html, css, JS, Vue",
+    "photo": "./assets/images/works/portfolio.png",
+    "link": "https://github.com/#"
+  }
+]

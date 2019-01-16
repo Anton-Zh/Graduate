@@ -10,9 +10,10 @@ html(lang="ru")
     link(rel="stylesheet", href="main.min.css")
   body
     //- include ./common/preloader.pug
-    //- include ./blocks/parallax.pug 
     .wrapper.welcome
+      include ./blocks/parallax.pug 
       .welcome__container
+    
         .welcome__top
           .btn
             button.btn__auth

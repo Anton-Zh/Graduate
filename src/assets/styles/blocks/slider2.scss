@@ -1,0 +1,288 @@
+.slider__wrapper {
+  display: flex;
+  width: 100%;
+  height: 750px;
+
+  @include tablets {
+    flex-direction: column-reverse;
+  }
+  @include phones {
+    height: auto;
+  }
+}
+
+.slider__col {
+  width: 50%;
+  height: 705px;
+
+  &--left {
+    background: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &--right {
+    background: $bg-color--dark;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
+  @include phones {
+    height: auto;
+  }
+}
+
+.slider__main {
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // max-width: 902px;
+  max-height: 525px;
+
+  @include tablets {
+    margin-bottom: 270px;
+  }
+
+  @include phones {
+    height: 257px;
+    margin-bottom: 220px;
+  }
+  
+}
+
+.slider__list {
+  height: 225px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include phones {
+    height: 94px;
+  }
+  
+}
+
+.slider__btn {
+  width: 451px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @include phones {
+    width: 160px;
+    height: 94px;
+  }
+ 
+  &-pic {
+    position: absolute;
+    width: 26px;
+    height: 16px;
+    fill: white;
+    &-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(182, 180, 174, 0.7);
+      &:hover {
+        background-color: rgba(182, 180, 174, 0.3);
+        & .slider__btn-pic {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.slide__burgers {
+  max-width: 643px;
+  max-height: 416px;
+
+  @include phones {
+    width: 246px;
+  }
+}
+
+.slide__list {
+  display: flex;
+  width: 902px;
+  height: 226px;
+}
+
+.slide__btn {
+  width: 451px;
+  height: 226px;
+
+  &-pic {
+    fill: white;
+  }
+
+  
+  
+}
+
+
+.slide__btn-img {
+  max-width: 337px;
+  max-height: 200px;
+  @include phones {
+    width: 160px;
+    height: 94px;
+
+  }
+}
+
+.slider__info.tools {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets {
+    // margin-top: 0px;
+    width: 100%;
+    background: $bg-color;
+    z-index: 1;
+    margin-top: -180px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    height: 270px;
+    // margin-bottom: 0px;
+  }
+  @include phones {
+    height: 220px;
+    margin-top: -408px;
+  }
+}
+
+// по вебинару Ольги Болотовой
+
+// .slider {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   height: 500px;
+
+//   &__wrapper {
+//     width: 400px;
+//   }
+
+//   &__main-slide {
+//     background-color: brown;
+//     height: 200px;
+//     width: 100%;
+//   }
+
+//   &__up-slide {
+//     background-color: gold;
+//     height: 200px;
+//     width: 50%;
+//   }
+
+//   &__down-slide {
+//     background-color: green;
+//     height: 200px;
+//     width: 50%;
+//   }
+// }
+//////////////////////////////////////////////
+.slider{
+  height: 100vh;
+  min-height: 650px;
+  display: grid;
+  grid-template: 
+   "info display" 70%
+   "info btns" 30%
+   /1fr 1fr;
+   @include tablets {
+    grid-template:
+     "info display" 50% 
+    "info btns" 25% 
+    "info title" 25%
+  }
+}
+
+.works__title{
+  grid-area: info;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  // text-align: center;
+  font-family: 'SansusWebissimo', Courier, monospace;
+
+  @include tablets {
+    grid-area: title;
+    grid-row: 2/3;
+  }
+
+}
+
+.subtitle--uppercase{
+  text-transform: uppercase;
+  color: #474b57;
+  font-size: 35px;
+  max-width: 390px;
+  margin: 0 auto;
+  @include tablets {
+    font-size: 28px;
+  }
+}
+
+.desc{
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+  color: #18489b;
+}
+
+.display{
+  background: #e3e2de;
+  grid-area: display;
+  @include tablets {
+    grid-row: 1/2;
+  }
+}
+
+.block-works{
+  display: flex;
+  overflow: hidden;
+  grid-area: btns;
+  @include tablets {
+    grid-row: 3/4;
+    }
+
+}
+
+.small-work--pht{
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 25px;
+  user-select:none;
+}
+
+.main-work {
+  margin-top: 100px;
+  @include tablets {
+  margin-top: 20px;
+  }
+}
+
+.slider__box{
+  text-align: center;
+  width: 100%;
+  background: #f2f0e8;
+  @include tablets {
+    flex-direction: column;
+  
+  }
+
+}

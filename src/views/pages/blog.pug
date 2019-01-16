@@ -5,7 +5,7 @@ block variables
 
 block content
 
-  section.hero__container
+  section.hero__container.js-hero__container
     .socials__block.hero__socials
       ul.socials__list
         -
@@ -26,9 +26,10 @@ block content
     //-   +icon('portfolio_header', 'hero__pic')
     .hero__content
       .user
-        .user-img__wrapper
-          +image('avatar.jpg', 'avatar pic', 'user__img')
-        .block-subtitle.blog__title-text Блог
+        .js-hero__avatar
+          .user-img__wrapper
+            +image('avatar.jpg', 'avatar pic', 'user__img')
+        .block-subtitle.blog__title-text.js-block__text Блог
           +icon('blog_header', 'blog__pic')
         span.blog__title-description Статьи которые я написал
     

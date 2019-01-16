@@ -1,9 +1,9 @@
 (function () {
 
   let parallax = (function () {
-    let bg = document.querySelector('.js_hero__bg');
-    let bgText = document.querySelector('.js_hero__title');
-    let user = document.querySelector('.js_hero__content');
+    let container = document.querySelector('.js-hero__container');
+    let user = document.querySelector('.js-hero__avatar');
+    let blocktitle = document.querySelector('.js-block__text');
 
     return {
       move(block, windowScroll, strafeAmount) {
@@ -16,9 +16,9 @@
       },
 
       init(wScroll) {
-        this.move(bg, wScroll, 100);
-        this.move(bgText, wScroll, 40);
-        this.move(user, wScroll, 5);
+        this.move(container, wScroll, 50);
+        this.move(user, wScroll, 25);
+        this.move(blocktitle, wScroll, 2);
       }
     }
   })();
