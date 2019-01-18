@@ -1,5 +1,8 @@
-.tools__title {
-
+.tools {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .tools__list {

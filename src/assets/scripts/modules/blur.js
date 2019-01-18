@@ -4,7 +4,7 @@ var blur = (function () {
 
   return {
     set: function () {
-      var imgWidth = document.querySelector('.blur__background').offsetWidth, 
+      var imgWidth = document.querySelector('.blur__form').offsetWidth, 
           posLeft = -wrapper.offsetLeft,
           posTop = -wrapper.offsetTop,
           blurCSS = form.style;

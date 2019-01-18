@@ -2,7 +2,7 @@
 .slider {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 775px;
   background-color: $main;
 }
 
@@ -34,9 +34,13 @@
 }
 
 .slider__info {
-  grid-area: info;
+  text-align: center;
+  height: 143%;
+  display: flex;
+  align-items: center;
+  // grid-area: info;
   background-color: #f0efe9;
-  justify-content: end;
+  justify-content: center;
 }
 
 .slider__title {
@@ -52,17 +56,18 @@
 }
 
 .slider__display {
-  grid-area: display;
+  height: 100%;
+  // grid-area: display;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .slide__img {
-  max-width: 60%;
+  max-width: 90%;
 
   &--display {
-    min-width: 80%;
+    min-width: 60%;
   }
 }
 
@@ -81,7 +86,6 @@
   cursor: pointer;
   user-select: none;
 
-
   &::before {
     content: '';
     position: absolute;
@@ -93,6 +97,9 @@
     background-color: $dark-grey;
     opacity: .3;
     transition: all .3s;
+  }
+  &-img {
+    // max-width: 100%;
   }
 }
 

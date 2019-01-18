@@ -21,13 +21,21 @@
   display: flex;  
 
   & button{
+    text-decoration: none;
     height: 45px;
     width: 190px;
     background: $main;
     color: #fff;
     text-align: center;
     font-family: $font-RR;
-    
+    border-right: #c4cbcd 1px solid;
+    border-left: #c4cbcd 1px solid;
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
     &:hover {
       background: $secondary;
     }

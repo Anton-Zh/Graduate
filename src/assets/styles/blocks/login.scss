@@ -138,13 +138,22 @@ opacity: 1;
 }
 
 .login__button {
+  
+  
   &--main {
+    text-decoration: none;
+    color: white;
+    border: none;
     border-bottom-left-radius: 5px;
+    & button {
     border-right: #c4cbcd 1px solid;
+    }
   }
 
   &--entry {
     border-bottom-right-radius: 5px;
+    & button {
     border-left: #c4cbcd 1px solid;
+    }
   }
 }
