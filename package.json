@@ -76,7 +76,9 @@
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "signale": "^1.1.0",
-    "vue": "2.5.13"
+    "vue": "2.5.13",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
   },
   "bugs": {
     "url": "https://github.com/loftschool/advanced-boilerplate/issues"

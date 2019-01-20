@@ -1,17 +1,16 @@
 .parallax {
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background: url(./assets/images/bg/bg-index.png) center center / cover no-repeat;
-  z-index: -10
+  background: url(./assets/images/bg/bg-index.png)center center/cover no-repeat;
+  z-index: 0;
 }
 
 .parallax__layer {
   position: absolute;
-  top: 34%;
-  left: 0;
+  top: 100%;
   width: 100%;
   height: 100%;
   will-change: transform;
@@ -23,7 +22,7 @@
 
 .parallax__img {
   position: absolute;
-  bottom: 0;
+  // bottom: 0;
   left: 50%;
   min-width: 120%;
   transform: translateX(-50%);
