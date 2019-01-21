@@ -8,8 +8,25 @@
     <link rel="stylesheet" href="main.min.css">
   </head>
   <body>
+    <div class="preloader js_preloader">
+      <div class="preloader__container">
+        <svg class="preloader__img js_preloader__img" x="0px" y="0px" width="144px" height="144px" viewBox="0 0 144 144" enable-background="new 0 0 144 144" xml:space="preserve">
+          <circle class="preloader__circle preloader__circle-1" opacity="0.4" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" enable-background="new" cx="72" cy="71.999" r="70"></circle>
+          <circle class="preloader__circle preloader__circle-2" opacity="0.7" fill="none" stroke="#FFFFFF" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new" cx="72" cy="72" r="55"></circle>
+          <circle class="preloader__circle preloader__circle-3" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"></circle>
+        </svg><span class="preloader__progress js_preloader__progress"></span>
+      </div>
+    </div>
     <div class="wrapper">
-      <section class="hero__container">
+      <div class="burger__menu--active">
+        <ul class="burger__list">
+          <li class="burger__item"><a class="burger__link" href="works.html">Мои работы</a></li>
+          <li class="burger__item"><a class="burger__link" href="blog.html">Блог</a></li>
+          <li class="burger__item"><a class="burger__link" href="about.html">Обо мне</a></li>
+          <li class="burger__item"><a class="burger__link" href="index.html">Авторизация </a></li>
+        </ul>
+      </div>
+      <section class="hero__container js-hero__container">
         <div class="socials__block hero__socials">
           <ul class="socials__list">
             <li class="socials__item"><a class="socials__link" href="https://vk.com">
@@ -26,16 +43,18 @@
                 </svg></a></li>
           </ul>
         </div>
-        <div class="hero__menu">
+        <button class="burger__menu">
           <div class="burger-btn">
             <div class="burger-btn__elem"></div>
           </div>
-        </div>
+        </button>
         <div class="hero__content">
           <div class="user">
-            <div class="user-img__wrapper"><img class="user__img" src="./assets/images/avatar.jpg" alt="avatar pic"/>
+            <div class="js-hero__avatar">
+              <div class="user-img__wrapper"><img class="user__img" src="./assets/images/avatar.jpg" alt="avatar pic"/>
+              </div>
             </div>
-            <div class="block-subtitle blog__title-text">Блог
+            <div class="block-subtitle blog__title-text js-block__text">Блог
               <svg class="blog__pic blog__pic--blog_header">
                 <use xlink:href="./assets/images/icons/sprite.svg#blog_header"></use>
               </svg>
@@ -45,103 +64,180 @@
       </section>
       <section class="blog">
         <div class="blog__page">
+          <div class="triangle">
+            <div class="triangle__left triangle__left--white"></div>
+          </div>
           <aside class="blog-aside">
-            <div class="triangle">
-              <div class="triangle__left triangle__left--white"></div>
-            </div>
             <nav class="sidebar">
               <ul class="sidebar__list">
-                <li class="sidebar__item"><a class="sidebar__link" href="#">Самое важное в SASS</a></li>
-                <li class="sidebar__item"><a class="sidebar__link" href="#">Приемы в верстке, без которых не обходится ни один сайт</a></li>
-                <li class="sidebar__item"><a class="sidebar__link" href="#">Самый необходимый набор Gulp плагинов</a></li>
-                <li class="sidebar__item"><a class="sidebar__link" href="#">Почему я выбрал Pug</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#1">Самое важное в SASS</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#2">Приемы в верстке, без которых не обходится ни один сайт</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#3">Для чего нам нужен БЭМ</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#4">Сбока наше всё!</a></li>
+                <li class="sidebar__item"><a class="sidebar__link" href="#5">Адаптив и CSS Grid</a></li>
               </ul>
             </nav>
           </aside>
+          <button class="sidebar__menu"></button>
           <div class="blog-content">
             <div class="triangle">
               <div class="triangle__right triangle__right--white"></div>
             </div>
             <div class="articles">
-              <article class="article"> 
-                <h2 class="article__title block-subtitle">Самое важное в SASS</h2>
-                <div class="article__date">20.04.2018<span class="article__time">15:24</span></div>
-                <div class="article__content">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
-                <div class="aticle__pic">
-                  <div class="cod-example-box"><img class="code-example-pic" src="./assets/images/cod.png" alt="Example code"/>
+              <article class="article__box"> 
+                <div class="article" id="1">
+                  <h2 class="article__title block-subtitle">Самое важное в SASS</h2>
+                  <div class="article__date">20.04.2018<span class="article__time">15:24</span></div>
+                  <div class="article__content">
+                    Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+                  <div class="aticle__pic">
+                    <div class="cod-example-box"><img class="code-example-pic" src="./assets/images/cod.png" alt="Example code"/>
+                    </div>
                   </div>
                 </div>
               </article>
-              <article class="article">
-                <h2 class="article__title block-subtitle">Приемы в верстке, без которых не обходится ни один сайт</h2>
-                <div class="article__date">15.06.2018<span class="article__time">17:09</span></div>
-                <div class="article__content">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+              <article class="article__box">
+                <div class="article" id="2">
+                  <h2 class="article__title block-subtitle">Приемы в верстке, без которых не обходится ни один сайт</h2>
+                  <div class="article__date">15.06.2018<span class="article__time">17:09</span></div>
+                  <div class="article__content">
+                    Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+                </div>
               </article>
-              <article class="article">
-                <h2 class="article__title block-subtitle">Для чего нам БЭМ?</h2>
-                <div class="article__date">17.06.2018<span class="article__time">12:15</span></div>
-                <div class="article__content">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+              <article class="article__box">
+                <div class="article" id="3">
+                  <h2 class="article__title block-subtitle">Для чего нам БЭМ?</h2>
+                  <div class="article__date">17.06.2018<span class="article__time">12:15</span></div>
+                  <div class="article__content">
+                    Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+                </div>
               </article>
-              <article class="article">
-                <h2 class="article__title block-subtitle">Сборка наше всё!</h2>
-                <div class="article__date">20.06.2018<span class="article__time">11:00</span></div>
-                <div class="article__content">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+              <article class="article__box">
+                <div class="article" id="4">
+                  <h2 class="article__title block-subtitle">Сборка наше всё!</h2>
+                  <div class="article__date">20.06.2018<span class="article__time">11:00</span></div>
+                  <div class="article__content">
+                    Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+                </div>
               </article>
-              <article class="article">
-                <h2 class="article__title block-subtitle">Адаптив и CSS Grid</h2>
-                <div class="article__date">3.07.2018<span class="article__time">19:32</span></div>
-                <div class="article__content">
-                  Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+              <article class="article__box">
+                <div class="article" id="5">
+                  <h2 class="article__title block-subtitle">Адаптив и CSS Grid</h2>
+                  <div class="article__date">3.07.2018<span class="article__time">19:32</span></div>
+                  <div class="article__content">
+                    Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи новая модель организационной деятельности играет важную роль в формировании систем массового участия.<br> <p> Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</div>
+                </div>
               </article>
             </div>
           </div>
         </div>
       </section>
       <footer class="footer">
-        <div class="footer__row"> 
-          <div class="footer__col">
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__item">               <a class="menu__item-link menu__link" href="works.html">Мои работы</a></li>
-                <li class="menu__item">               <a class="menu__item-link menu__link" href="about.html">Обо мне</a></li>
-                <li class="menu__item">               <a class="menu__item-link menu__link" href="blog.html">Блог</a></li>
-                <li class="menu__item">               <a class="menu__item-link menu__link" href="#">Авторизация</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="footer__col footer__col--right">
-            <div class="socials__block footer__socials-list">
-              <ul class="socials__list">
-                <li class="socials__item socials__item-round"><a class="socials__link" href="https://vk.com">
-                    <svg class="social__img social__img--vk_round">
-                      <use xlink:href="./assets/images/icons/sprite.svg#vk_round"></use>
-                    </svg></a></li>
-                <li class="socials__item socials__item-round"><a class="socials__link" href="https://github.com">
-                    <svg class="social__img social__img--github_round">
-                      <use xlink:href="./assets/images/icons/sprite.svg#github_round"></use>
-                    </svg></a></li>
-                <li class="socials__item socials__item-round"><a class="socials__link" href="https://www.linkedin.com">
-                    <svg class="social__img social__img--in_round">
-                      <use xlink:href="./assets/images/icons/sprite.svg#in_round"></use>
-                    </svg></a></li>
-              </ul>
+        <div class="footer__box">
+          <div class="footer__row"> 
+            <div class="footer__col">
+              <nav class="menu">
+                <ul class="menu__list">
+                  <li class="menu__item">               <a class="menu__item-link menu__link" href="works.html">Мои работы</a></li>
+                  <li class="menu__item">               <a class="menu__item-link menu__link" href="about.html">Обо мне</a></li>
+                  <li class="menu__item">               <a class="menu__item-link menu__link" href="blog.html">Блог</a></li>
+                  <li class="menu__item">               <a class="menu__item-link menu__link" href="index.html">Авторизация</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__col footer__col--right">
+              <div class="socials__block footer__socials-list">
+                <ul class="socials__list">
+                  <li class="socials__item socials__item-round"><a class="socials__link" href="https://vk.com">
+                      <svg class="social__img social__img--vk_round">
+                        <use xlink:href="./assets/images/icons/sprite.svg#vk_round"></use>
+                      </svg></a></li>
+                  <li class="socials__item socials__item-round"><a class="socials__link" href="https://github.com">
+                      <svg class="social__img social__img--github_round">
+                        <use xlink:href="./assets/images/icons/sprite.svg#github_round"></use>
+                      </svg></a></li>
+                  <li class="socials__item socials__item-round"><a class="socials__link" href="https://www.linkedin.com">
+                      <svg class="social__img social__img--in_round">
+                        <use xlink:href="./assets/images/icons/sprite.svg#in_round"></use>
+                      </svg></a></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="footer__row">
-          <div class="footer__col">
-            <p>Я веб разработчик из Москвы и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+          <div class="footer__row">
+            <div class="footer__col">
+              <p>Я веб разработчик из Москвы и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
+            </div>
+            <div class="footer__col footer__col--right"><span>© Жалдак Антон | Создано с любовью в LoftSchool | 2018</span></div>
           </div>
-          <div class="footer__col footer__col--right"><span>© Жалдак Антон | Создано с любовью в LoftSchool | 2018</span></div>
         </div>
       </footer>
+      <script type="text/x-template" id="skills-list">
+        <ul class="skills">
+          <li class="skills__item" v-for="skillsGroupObj in skills">
+            <skills-row :skillsGroupObj="skillsGroupObj"></skills-row>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="skills-item">
+        <div class="skills-row">
+          <div class="skills-row__title">{{skillsGroupObj.skillsGroup}}</div>
+          <ul class="skills">
+            <li class="skills__item" v-for="skillPercentage,skillTitle in skillsGroupObj.skills">
+              <skill :skillPercentage="skillPercentage" :skillTitle="skillTitle"></skill>
+            </li>
+          </ul>
+        </div>
+      </script>
+      <script type="text/x-template" id="skill">
+        <div class="skill">
+          <svg class="skill__figure" viewBox="0 0 100 100" preverseAspectRatio="none">
+            <circle class="skill__circle skill__circle--under" cx="50" cy="50" r="40"></circle>
+            <circle class="skill__circle skill__circle--above" cx="50" cy="50" r="40" ref="circle"></circle>
+          </svg>
+          <div class="skill-title">{{skillTitle}}</div>
+        </div>
+      </script>
+      <script type="text/x-template" id="slider-root">
+        <section class="slider">
+          <div class="slider__wrapper">
+            <info :work="currentWork"></info>
+            <display :work="currentWork"></display>
+            <btns :works="works" :index="currentIndex" @slide="handleSlide"></btns>
+          </div>
+        </section>
+      </script>
+      <script type="text/x-template" id="slider-info">
+        <div class="slider__info">
+          <div class="tools">
+            <h3 class="title title--small tools__title">{{work.title}}</h3>
+            <div class="tools__list"><span class="tools__name">{{work.tools}}</span></div><a class="tools__btn">
+              <svg class="tools__btn-pic tools__btn-pic--link">
+                <use xlink:href="./assets/images/icons/sprite.svg#link"></use>
+              </svg><a class="tools__btn-text" :href="work.link">Посмотреть сайт</a></a>
+          </div>
+        </div>
+      </script>
+      <script type="text/x-template" id="slider-display">
+        <div class="slider__display"><img class="slide__img slide__img--display" :src="work.photo"></div>
+      </script>
+      <script type="text/x-template" id="slider-btns">
+        <div class="slider__btns">
+          <button class="slider__btn slider__btn--prev" @click="slide('prev')"><img class="slide__img slide__btn-img" :src="prevBtnWorks[index].photo">
+            <svg class="slider__btn-pic slider__btn-pic--portf_arrow_down">
+              <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+            </svg>
+          </button>
+          <button class="slider__btn slider__btn--next" @click="slide('next')"><img class="slide__img slide__btn-img" :src="nextBtnWorks[index].photo">
+            <svg class="slider__btn-pic slider__btn-pic--portf_arrow_up">
+              <use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
+            </svg>
+          </button>
+        </div>
+      </script>
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>
-    <script src="about.bundle.js"></script>
+    <script src="blog.bundle.js"></script>
   </body>
 </html>
