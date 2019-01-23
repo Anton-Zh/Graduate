@@ -1,11 +1,13 @@
 <template lang="pug">
-  tr(v-if="editmode === false")
+  tr.skill__box(v-if="editmode === false")
     td.skill__title {{skill.title}}
     td.skill__percent {{skill.percents}}%
     td
-      button.btn.btn--rem(type="button" @click="removeSkill(skill.id)") x
-
-  tr(v-else)
+      button.btn.btn--edt(type="button" @click="removeSkill(skill.id)")
+        img(src="../../assets/images/pencil.png" class="icon")
+      button.btn.btn--rem(type="button" @click="removeSkill(skill.id)")
+        img(src="../../assets/images/cancel.png" class="icon")
+  tr.skill__box--new(v-else)
     td 
       input.skill__name--new(type="text" placeholder="name" v-model="newSkill.title")
     td 
@@ -13,7 +15,6 @@
     td
       button.btn.btn--add(type="button" @click="addNewSkill(newSkill)") +
   
-
 </template>
 
 <script>
@@ -48,7 +49,7 @@ export default {
       removeSkill: "skills/remove"
     }),
     // addNewSkill(newSkill) {
-    //   this.addSkillAction(newSkill).then(response => { 
+    //   this.addSkillAction(newSkill).then(response => {
     //     this.newSkill.title = ""
     //     this.newSkill.percents = ""
     //   })

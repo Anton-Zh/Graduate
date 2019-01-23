@@ -2,12 +2,17 @@
   #blog
     h1 Страница "Блог"
     .content 
+      Articles
 </template>
 
 <script>
+import Articles from "./Articles";
+
 export default {
-  
-}
+  components: {
+    Articles,
+    }
+};
 </script>
 
 <style lang="scss" scoped>
