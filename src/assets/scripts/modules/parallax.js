@@ -16,9 +16,9 @@
       },
 
       init(wScroll) {
-        this.move(container, wScroll, 50);
-        this.move(user, wScroll, 25);
-        this.move(blocktitle, wScroll, 2);
+        this.move(container, wScroll, 200);
+        this.move(user, wScroll, 8);
+        this.move(blocktitle, wScroll, 1);
       }
     }
   })();
