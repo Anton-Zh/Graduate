@@ -11,16 +11,10 @@
 <script>
 import header from "./components/header";
 import tabs from "./components/tabs";
-// import about from "./components/about";
-// import blog from "./components/blog";
-// import works from "./components/works";
 export default {
   components: {
     appHeader: header,
     tabs
-    // about,
-    // works,
-    // blog
   }
 };
 </script>

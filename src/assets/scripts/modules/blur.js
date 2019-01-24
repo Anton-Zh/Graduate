@@ -1,10 +1,10 @@
 var blur = (function () {
-  var wrapper = document.querySelector('.blur__form-wrapper'),
-    form = document.querySelector('.blur__form');
+  var wrapper = document.querySelector('.js__blur__cont'),
+      form = document.querySelector('..js__blur__form');
 
   return {
     set: function () {
-      var imgWidth = document.querySelector('.blur__form').offsetWidth, 
+      var imgWidth = document.querySelector('.js__blur').offsetWidth, 
           posLeft = -wrapper.offsetLeft,
           posTop = -wrapper.offsetTop,
           blurCSS = form.style;
