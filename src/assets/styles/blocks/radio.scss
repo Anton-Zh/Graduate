@@ -1,0 +1,69 @@
+.radio__buttons {
+  display: flex;
+  margin-top: 14px;
+}
+
+.radio__buttons__label {
+  display: flex;
+  position: relative;
+  margin-left: 20px;
+  align-items: center;
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.radio__mark {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.radio__mark-fake{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  margin-left: 0px;
+}
+
+.radio__mark:checked + .radio__mark-fake{
+  border: 1px solid $main;
+}
+
+.radio__mark:checked + .radio__mark-fake::before {
+  height: 9px;
+  width: 9px;
+}
+
+.radio__mark-fake::before {
+  content: '';
+  display: flex;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: $main;
+  transition: 0.5s;
+}
+
+.radio__mark:checked + .radio__mark-fake + 
+.radio__mark-text {
+  color: $main;
+}
+
+.radio__mark-text {
+  color: #221f1f;
+  font-weight: 300;
+  margin-left: 8px;
+  color: $text-color;
+
+}
+
+.radio__mark-text {
+  margin-left: 10px;
+ 
+}

@@ -1,9 +1,30 @@
 .reviews {
-  background: url(./assets/images/bg/bg-reviews.png) center center / cover no-repeat;
+  // background: url(./assets/images/bg/bg-reviews.png) center center / cover no-repeat;
+  height: 1280px;
+  display: flex;
+  
+  
+  @include phones {
+    height: 1403px;
+  }
+}
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center; 
+  align-items: center;
+  // z-index: 3;
 }
 
 .reviews__top {
-  height: 100vh;
+  // height: 100vh;
+  margin-bottom: 50px;
+  @include tablets {
+    margin-bottom: 0;
+  }
+
 }
 
 .reviews__bot {
@@ -17,12 +38,96 @@
   // flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  width: 499px;
+  height: 175px;
+  @include phones {
+    height: 134px;
+  }
 }
 
 .reviews__title-text {
   margin-top: 30px;
-  width: 30%;
+  width: 350px;
+  height: 112px;
   text-align: center;
-  
+  font-size: 63px;
+  line-height: 66px;
+  font-weight: 400;
+  @include phones {
+    margin-top: 0;
+    width: 45%;
+  }
+}
+
+.reviews__columns {
+  display: flex;
+  margin-bottom: 69px;
+  @include tablets {
+    margin-bottom: 50px;
+  }
+
+  &--left, &--right {
+    width: 390px;
+    @include tablets {
+      width: 294px;
+    }
+  }
+  &--right {
+    margin-left: 38px;
+    @include phones {
+      margin-left: 0;
+    }
+  }
+
+  @include phones {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+.column__pic {
+  margin-bottom: 30px;
+  width: 33px;
+  height: 29px;
+  opacity: 0.5;
+  @include phones {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  &-svg {
+    width: 125px;
+    height: 109px;
+    @include phones {
+      width: 130%;
+    }
+  }
+}
+
+.column__text {
+  margin-bottom: 30px;
+  color: $text-color;
+  line-height: 26px;
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.column__author {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+
+  &-text {
+    margin-left: 20px;
+    color: $main;
+  }
+
+  &-name {
+    font-weight: bold;
+  }
+
+  @include phones {
+    margin-bottom: 10px;
+  }
 }

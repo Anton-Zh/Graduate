@@ -1,0 +1,32 @@
+.rew__img {
+  display: flex;
+  min-width: 100%;
+  z-index: -1;
+}
+
+.rew__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-width: 900px;
+}
+
+.reviews__form__blur {
+  background: url(./assets/images/bg/bg-reviews.png) center no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  filter: blur(20px);
+}
+
+.reviews__form-wrapper {
+  width: 380px;
+  height: 437px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  
+}

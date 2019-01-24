@@ -12,4 +12,46 @@
     background-color: #fff;
     color: $main;
   }
+  &--active {
+    opacity: 0;
+  }
 }
+
+.btn--form {
+  display: flex;  
+
+  & button{
+    text-decoration: none;
+    height: 45px;
+    width: 190px;
+    background: $main;
+    color: #fff;
+    text-align: center;
+    font-family: $font-RR;
+    border-right: #c4cbcd 1px solid;
+    border-left: #c4cbcd 1px solid;
+    &:first-child {
+      border-left: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+    &:hover {
+      background: $secondary;
+    }
+    @include phones {
+      width: 150px;
+    }
+  }
+}
+
+.btn__send {
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid #f1f1f294;
+}
+
+.btn__clear {
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid #f1f1f294;
+}
+

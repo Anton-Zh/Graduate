@@ -8,47 +8,65 @@ block content
   include ../common/hero.pug
 
   section.works
+    .anchor#anchor
     .works__left
       .triangle
-        .triangle__left.triangle__left-white
+        .triangle__left.triangle__left--white
     .works__right
       .triangle
-        .triangle__right.triangle__right-white
-    .works__title
+        .triangle__right.triangle__right--white
+    .works__title-box
       .title-bg
         +icon('works_header', 'title__pic')
-      h1.title Мои работы
-    .slider__wrapper
-      .slider__col.slider__col--left
-        .slider__info.tools
-          h3.title.title--small.tools__title Сайт фитнес клуба
-          .tools__list
-            span.tools__name HTML, CSS, javascript
-          a.tools__btn
-            +icon('link', 'tools__btn-pic')
-            span.tools__btn-text Посмотреть сайт
+      h1.title.title--work Мои работы
+    
+    .slider__box
+      #slider-component
 
-      .slider__col.slider__col--right
-        .slider__main
-          +image('works/burgers.png', 'burgers', 'slide__img slide__burgers')
-        ul.slider__list
-          li.slider__btn.slider__btn--prev
-            +image('works/fitness.png', 'fitness', 'slide__img slide__btn-img')
-            +icon('portf_arrow_down', 'slider__btn-pic')
-          li.slider__btn.slider__btn--next
-            +image('works/portfolio.png', 'portfolio', 'slide__img slide__btn-img')
-            +icon('portf_arrow_up', 'slider__btn-pic')
-
-  section.reviews
+  section.reviews#reviews
+    .rew__background.js__blur
+      +image('bg/bg-reviews.png', 'water', 'rew__img')
     .reviews__container
       .reviews__top
         .reviews__title
           .title-bg
             +icon('about_header', 'title__pic')
           h2.title.reviews__title-text Что обо мне говорят
-        .reviews__top-col
-        .reviews__top-col
-      .reviews__bot
+      .reviews__columns
+        .reviews__columns--left
+          .column__pic 
+            +icon('quote', 'column__pic-svg')
+          .column__text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 3,5 месяца только самых тяжелых испытаний и бессонных ночей!
+          .column__author 
+            .column__author-pic 
+              +image('DK.png', 'author-pic--DK')
+            .column__author-text
+              .column__author-name Ковальчук Дмитрий
+              .column__author-description основатель LoftSchool
+        .reviews__columns--right
+          .column__pic 
+            +icon('quote', 'column__pic-svg')
+          .column__text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+          .column__author
+            .column__author-pic 
+              +image('VS.png', 'author-pic--VS', alt="picture Vladimir")
+            .column__author-text
+              .column__author-name Сабанцев Владимир
+              .column__author-description наставник
+        
+      .reviews__form-wrapper.js__blur__cont
+        .reviews__form__blur.js__blur__form
+        form.reviews__form(method='post' autocomplete)
+          .reviews__form-title Связаться со мной
+          .reviews__form-data
+            input.form__data.form__data--name(type="text" alt="name" placeholder="Имя")
+            input.form__data.form__data--email(type="email" alt="email" placeholder="E-mail")
+            textarea.form__data.form__data--msg(name="Message" placeholder="Введите сообщение" alt="your massage" type="text")
+          .btn.btn--form
+            button.btn__send(type="subbmit") Отправить
+            button.btn__clear(type="reset") Очистить
+      a.hero__arrow-down.arrow-up(href="#reviews")
+        +icon('arrow_down', 'arrow-down__pic')          
 
 block scripts
-  script(src='about.bundle.js')
+  script(src='works.bundle.js')

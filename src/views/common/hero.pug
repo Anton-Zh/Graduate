@@ -1,7 +1,7 @@
 // hero section
 
-section.hero__container
-  .hero__socials
+section.hero__container.js-hero__container#hero
+  .socials__block.hero__socials
     ul.socials__list
       -
         var socials = [
@@ -14,16 +14,17 @@ section.hero__container
         li.socials__item
           a(href=`${item.href}`).socials__link
             +icon(`${item.name}`, 'social__img')
-  .hero__menu
+  button.burger__menu
     .burger-btn
       .burger-btn__elem
   .hero__title
     +icon('portfolio_header', 'hero__pic')
   .hero__content
     .user
-      .user-img__wrapper
-        +image('avatar.jpg', 'avatar pic', 'user__img')
-      span.user__name Жалдак Антон
+      .js-hero__avatar
+        .user-img__wrapper
+          +image('avatar.jpg', 'avatar pic', 'user__img')
+      span.user__name.js-block__text Жалдак Антон
       span.user__spec Личный сайт веб разработчика
-  .hero__arrow-down
+  a.hero__arrow-down(href="#anchor")
     +icon('arrow_down', 'arrow-down__pic' )

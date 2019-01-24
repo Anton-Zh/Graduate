@@ -9,18 +9,23 @@ html(lang="ru")
     title Portfolio | welcome page
     link(rel="stylesheet", href="main.min.css")
   body
-    .wrapper
+    //- include ./common/preloader.pug
+    .wrapper.welcome
+      include ./blocks/parallax.pug 
       .welcome__container
+    
         .welcome__top
-          button.btn__auth
-            span Авторизоваться
+          .btn
+            button.btn__auth
+              span Авторизоваться
 
         main.welcome__content
-          block profile
+          .flip-container
+            .flipper
+              block profile
+              block login
 
         .welcome__bot
           p.copyright.welcome__copyright © Жалдак Антон | создано с любовью в LoftSchool | 2018
-
-    
 
     script(src="auth.bundle.js")

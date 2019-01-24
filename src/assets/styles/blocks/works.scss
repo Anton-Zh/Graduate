@@ -7,13 +7,28 @@
   &__right {
     background: white;
   }
+
+  @include tablets {
+    height: 1206px;
+  }
+  @include phones {
+    height: auto;  
+  }
 }
 
-.works__title {
+.works__title-box {
   height: 190px;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablets {
+    padding-bottom: 50px;
+  }
+  @include phones {
+    height: 95px;
+    padding-bottom: 0;
+  }
+  
 }
 
 .works_header {

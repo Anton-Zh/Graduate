@@ -3,4 +3,7 @@
   font-family: Roboto-Light;
   color: #fff;
   opacity: .6;
+  @include phones {
+    text-align: center;
+  }
 }

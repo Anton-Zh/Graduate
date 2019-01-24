@@ -1,0 +1,159 @@
+.login__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.login__data {
+  width: 100%;
+
+  &-input {
+    width: 100%;
+    background-color: white;
+    border: 0px;
+    padding-left: 20px;
+  }
+}
+
+
+.data__box {
+  display: flex;
+  width: auto;
+  height: auto;
+  border: 1px solid rgb(83, 29, 29);
+
+  &:first-child {
+    margin-top: 40px;
+  }
+  &:last-child {
+    margin-top: 20px;
+  }
+
+  & input {
+    &:active, &:focus {
+      border-color: red;
+    }
+  }
+}
+
+.data__svg {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0efe9;
+}
+
+.data__pass__box {
+  display: flex;
+  width: auto;
+  height: auto;
+  
+}
+
+.data-name-pic {
+  fill: #c4cbcd;
+  width: 15px;
+  height: 17px;
+}
+
+.data-pass-pic {
+  fill: #c4cbcd;
+  width: 18px;
+  height: 17px;
+}
+
+.login__validation {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.validation__block {
+  display: flex;
+
+  &--robot {
+    text-align: center;
+    margin-top: 20px;
+  }
+  &-title {
+    font-weight: bold;
+  }
+  &-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.checkbox-visible {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  // border: 1px solid black;
+  background: $main;
+  margin-right: 10px;
+  cursor: pointer;
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 8px;
+    color: #FFF;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    opacity: 0;
+    top: 2px;
+    left: 3px;
+  }
+}
+
+.validation-input {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.validation-input:checked ~ .checkbox-visible{
+  background: $main;
+
+}
+.validation-input:checked ~ .checkbox-visible::after{
+opacity: 1;
+
+}
+
+.validation__buttons {
+  display: flex;
+}
+
+.login__button {
+  
+  
+  &--main {
+    text-decoration: none;
+    color: white;
+    border: none;
+    border-bottom-left-radius: 5px;
+    & button {
+    border-right: #c4cbcd 1px solid;
+    }
+  }
+
+  &--entry {
+    border-bottom-right-radius: 5px;
+    & button {
+    border-left: #c4cbcd 1px solid;
+    }
+  }
+}

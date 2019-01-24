@@ -8,5 +8,16 @@
   "fullscreen": "1800px",
   "desktop": "1200px",
   "tablets": "768px",
-  "phones": "320px"
+  "phones": "320px",
+  "font-Bern": "BERNIERRegular-Regular",
+  "font-BernI": "BERNIERDistressed-Regular",
+  "font-BernS": "BERNIERShade-Regular",
+  "font-RR": "Roboto-Regular",
+  "font-RM": "Roboto-Medium",
+  "font-RI": "Roboto-Italic",
+  "font-RBI": "Roboto-BoldItalic",
+  "font-RB": "Roboto-Bold",
+  "font-RL": "Roboto-Light",
+  "font-RB": "FontAwesome"
+
 }

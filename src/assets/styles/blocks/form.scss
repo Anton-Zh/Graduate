@@ -1,0 +1,80 @@
+.reviews__form {
+  width: 380px;
+  height: 437px;
+  border-radius: 5px;
+  text-align: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+  text-align: center;
+  // z-index: 50;
+  &-title {
+    color: $text-color;
+  }
+  @include phones {
+    width: 300px;
+    height: 417px;
+  }
+}
+
+.reviews__form-title {
+  display: flex;
+  font-size: 35px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  margin-top: 37px;
+  color: $dark-grey;
+  line-height: 1;
+  font-family: $font-Bern;
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 22px;
+    background-color: $dark-grey;
+    opacity: .2;
+  }
+
+  &::before {
+    margin-right: 20px;
+  }
+  &::after {
+    margin-left: 20px;
+  }
+
+  @include phones {
+    font-size: 21px;
+  }
+  
+}
+
+.reviews__form-data input, textarea {
+  width: 340px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 0px;
+  background-color: #fff;
+  resize: none;
+  padding-left: 20px;
+
+  @include phones {
+    width: 95%;
+  }
+}
+
+.form__data {
+  height: 45px;
+  color: $dark-grey;
+
+  &--msg {
+    padding-top: 20px;
+    height: 140px;
+  }
+}
+
+
+  
