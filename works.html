@@ -27,7 +27,7 @@
         </ul>
       </div>
       <!-- hero section-->
-      <section class="hero__container" id="hero">
+      <section class="hero__container js-hero__container" id="hero">
         <div class="socials__block hero__socials">
           <ul class="socials__list">
             <li class="socials__item"><a class="socials__link" href="https://vk.com">
@@ -56,8 +56,10 @@
         </div>
         <div class="hero__content">
           <div class="user">
-            <div class="user-img__wrapper"><img class="user__img" src="./assets/images/avatar.jpg" alt="avatar pic"/>
-            </div><span class="user__name">Жалдак Антон</span><span class="user__spec">Личный сайт веб разработчика</span>
+            <div class="js-hero__avatar">
+              <div class="user-img__wrapper"><img class="user__img" src="./assets/images/avatar.jpg" alt="avatar pic"/>
+              </div>
+            </div><span class="user__name js-block__text">Жалдак Антон</span><span class="user__spec">Личный сайт веб разработчика</span>
           </div>
         </div><a class="hero__arrow-down" href="#anchor">
           <svg class="arrow-down__pic arrow-down__pic--arrow_down">
@@ -89,7 +91,7 @@
         </div>
       </section>
       <section class="reviews" id="reviews">
-        <div class="rew__background"><img class="rew__img" src="./assets/images/bg/bg-reviews.png" alt="water"/>
+        <div class="rew__background js__blur"><img class="rew__img" src="./assets/images/bg/bg-reviews.png" alt="water"/>
         </div>
         <div class="reviews__container">
           <div class="reviews__top">
@@ -136,8 +138,9 @@
               </div>
             </div>
           </div>
-          <div class="reviews__form-wrapper">
-            <div class="reviews__form">
+          <div class="reviews__form-wrapper js__blur__cont">
+            <div class="reviews__form__blur js__blur__form"></div>
+            <form class="reviews__form" method="post" autocomplete>
               <div class="reviews__form-title">Связаться со мной</div>
               <div class="reviews__form-data">
                 <input class="form__data form__data--name" type="text" alt="name" placeholder="Имя">
@@ -148,7 +151,7 @@
                 <button class="btn__send" type="subbmit">Отправить</button>
                 <button class="btn__clear" type="reset">Очистить</button>
               </div>
-            </div>
+            </form>
           </div><a class="hero__arrow-down arrow-up" href="#reviews">
             <svg class="arrow-down__pic arrow-down__pic--arrow_down">
               <use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
