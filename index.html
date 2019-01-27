@@ -71,18 +71,18 @@
                   </nav>
                 </div>
               </article>
-              <article class="profile-block profile-block--authorization">
+              <form class="profile-block profile-block--authorization" id="login">
                 <div class="profile-block__top profile-block__top--authorization">
                   <div class="login__box">
                     <div class="login__box-title title block-subtitle">Авторизуйтесь</div>
-                    <div class="login__data">
+                    <form class="login__data" action="#" method="post">
                       <div class="data__box">
                         <div class="data__svg">
                           <svg class="data-name-pic data-name-pic--login">
                             <use xlink:href="./assets/images/icons/sprite.svg#login"></use>
                           </svg>
                         </div>
-                        <input class="login__data-input" type="text" placeholder="Логин">
+                        <input class="login__data-input" type="text" placeholder="Логин" v-model="user.name">
                       </div>
                       <div class="data__box">
                         <div class="data__svg">
@@ -90,37 +90,37 @@
                             <use xlink:href="./assets/images/icons/sprite.svg#password"></use>
                           </svg>
                         </div>
-                        <input class="login__data-input" type="text" placeholder="Пароль">
+                        <input class="login__data-input" type="password" placeholder="Пароль" v-model="user.password">
                       </div>
-                    </div>
-                    <div class="login__validation">
-                      <div class="validation__block">
-                        <label class="validation__block-checkbox">
-                          <input class="validation-input" type="checkbox">
-                          <div class="checkbox-visible"></div>
-                          <div class="checkbox-title"><span>Я человек</span></div>
-                        </label>
-                      </div>
-                      <div class="validation__block--robot">
-                        <div class="validation__block-title">Вы точно не робот?
-                          <div class="radio__buttons">
-                            <label class="radio__buttons__label">
-                              <input class="radio__mark" name="human" type="radio"><span class="radio__mark-fake"></span><span class="radio__mark-text">Да</span>
-                            </label>
-                            <label class="radio__buttons__label">
-                              <input class="radio__mark" name="human" type="radio"><span class="radio__mark-fake"></span><span class="radio__mark-text">Не уверен</span>
-                            </label>
+                      <div class="login__validation">
+                        <div class="validation__block">
+                          <label class="validation__block-checkbox">
+                            <input class="validation-input" type="checkbox">
+                            <div class="checkbox-visible"></div>
+                            <div class="checkbox-title"><span>Я человек</span></div>
+                          </label>
+                        </div>
+                        <div class="validation__block--robot">
+                          <div class="validation__block-title">Вы точно не робот?
+                            <div class="radio__buttons">
+                              <label class="radio__buttons__label">
+                                <input class="radio__mark" name="human" type="radio" value="0"><span class="radio__mark-fake"></span><span class="radio__mark-text">Да</span>
+                              </label>
+                              <label class="radio__buttons__label">
+                                <input class="radio__mark" name="human" type="radio" value="1"><span class="radio__mark-fake"></span><span class="radio__mark-text">Не уверен</span>
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                      <div class="validation__buttons btn--form">
+                        <button class="login__button--main" type="button">На главную</button>
+                        <button class="login__button--entry" type="submit">Войти</button>
+                      </div>
+                    </form>
                   </div>
                 </div>
-                <div class="validation__buttons btn--form">
-                  <button class="login__button--main">На главную</button>
-                  <button class="login__button--entry">Войти</button>
-                </div>
-              </article>
+              </form>
             </div>
           </div>
         </main>
