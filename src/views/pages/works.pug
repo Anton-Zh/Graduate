@@ -23,9 +23,9 @@ block content
     .slider__box
       #slider-component
 
-  section.reviews#reviews
-    .rew__background.js__blur
-      +image('bg/bg-reviews.png', 'water', 'rew__img')
+  section.reviews#reviews.js__blur
+    //- .rew__background.js__blur
+    //-   +image('bg/bg-reviews.png', 'water', 'rew__img')
     .reviews__container
       .reviews__top
         .reviews__title
@@ -55,7 +55,7 @@ block content
               .column__author-description наставник
         
       .reviews__form-wrapper.js__blur__cont
-        .reviews__form__blur.js__blur__form
+        
         form.reviews__form(method='post' autocomplete)
           .reviews__form-title Связаться со мной
           .reviews__form-data
@@ -65,6 +65,7 @@ block content
           .btn.btn--form
             button.btn__send(type="subbmit") Отправить
             button.btn__clear(type="reset") Очистить
+          .reviews__form__blur.js__blur__form
       a.hero__arrow-down.arrow-up(href="#reviews")
         +icon('arrow_down', 'arrow-down__pic')          
 

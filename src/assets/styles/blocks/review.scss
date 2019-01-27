@@ -1,7 +1,8 @@
 .reviews {
-  // background: url(./assets/images/bg/bg-reviews.png) center center / cover no-repeat;
+  background: url(./assets/images/bg/bg-reviews.png) center no-repeat;
   height: 1280px;
   display: flex;
+  
   
   
   @include phones {

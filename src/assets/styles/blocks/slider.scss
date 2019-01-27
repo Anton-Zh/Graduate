@@ -2,8 +2,14 @@
 .slider {
   display: flex;
   flex-direction: column;
-  height: 775px;
+  height: 100vh;
   background-color: $main;
+  @include tablets {
+    height: 975px;
+  }
+  @include phones {
+    height: 80vh;
+  }
 }
 
 .slider__wrapper {
@@ -17,19 +23,20 @@
 
   @include tablets {
     grid-template:
-            'display' 54vh
-            'info' 27vh
-            'btns' 19vh
+            'display' 30%
+            'info' 48%
+            'btns' 22%
     / 100%;
-    height: 100vh;
+    height: 100%;
   }
 
   @include phones {
     grid-template:
-            'display' 45.5%
-            'info' 38.5%
-            'btns' 1fr
+            'display' 30%
+            'info' 48%
+            'btns' 22%
     / 100%;
+    // height: 100%;
   }
 }
 
@@ -41,6 +48,9 @@
   // grid-area: info;
   background-color: #f0efe9;
   justify-content: center;
+  @include tablets {
+    height: 100%;
+  }
 }
 
 .slider__title {

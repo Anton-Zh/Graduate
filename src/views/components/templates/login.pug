@@ -1,0 +1,31 @@
+script(type="text/x-template")#auth-form
+  form(action="#", method="post").login__data
+    .data__box
+      .data__svg
+        +icon('login', 'data-name-pic')
+      input(type="text" placeholder="Логин" v-model="user.name").login__data-input
+    .data__box
+      .data__svg
+        +icon('password', 'data-pass-pic')
+      input(type="password" placeholder="Пароль" v-model="user.password").login__data-input
+    .login__validation
+      .validation__block
+        label.validation__block-checkbox
+          input(type="checkbox").validation-input
+          .checkbox-visible
+          .checkbox-title
+            span Я человек
+      .validation__block--robot
+        .validation__block-title Вы точно не робот?
+          .radio__buttons
+            label.radio__buttons__label
+              input(name="human" type="radio" value = "0").radio__mark
+              span.radio__mark-fake
+              span.radio__mark-text Да
+            label.radio__buttons__label
+              input(name="human" type="radio" value = "1").radio__mark
+              span.radio__mark-fake
+              span.radio__mark-text Не уверен
+    .validation__buttons.btn--form
+      button.login__button--main(type="button") На главную
+      button.login__button--entry(type="submit") Войти

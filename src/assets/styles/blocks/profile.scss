@@ -32,7 +32,7 @@
   width: 100%;
   padding: 40px 40px;
   &--authorization {
-    padding: 40px 40px;
+    padding: 40px 40px 0 40px;
   }
   @include phones {
     padding: 20px 33px;

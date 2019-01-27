@@ -1,28 +1,28 @@
-import Vue from "vue";
-import axios from "axios";
+import axios from 'axios';
+import Vue from 'vue';
 
 new Vue({
-  el: "#auth-component",
-  data() {
-    return {
-      user: {
-        name: "admin",
-        password: "admin"
+  el: "#login",
+  data(){
+    return{
+      user:{
+        name: "",
+        password: ""
       }
     };
   },
-  methods: {
-    login() {
-      axios.post("http://localhost:8000/login", this.user).then(response => {
-        if (response.status === 200) {
-          const ttl = Math.floor(Date.now() / 1000 + response.data.ttl);
-          localStorage.setItem("token", response.data.token);
-          localStorage.setItem("ttl", ttl);
-
-          // window.location.href = "/admin";
+  methods:{
+    login(){
+      axios.post("https://webdev-api.loftschool.com/login", this.user).then(response =>{
+        if (response.status == 200){
+          const token = response.data.token;
+          localStorage.setItem("token",token);
         }
-      });
+      }, error=>{
+        console.error(error);
+      })
     }
   },
   template: "#auth-form"
-});
+
+})

@@ -8,7 +8,11 @@
 }
 
 .login__data {
-  width: 100%;
+  width: 127%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   &-input {
     width: 100%;
@@ -18,19 +22,21 @@
   }
 }
 
+.login__box-title {
+  margin-bottom: 20px;
+}
+
 
 .data__box {
   display: flex;
-  width: auto;
+  width: 100%;
   height: auto;
   border: 1px solid rgb(83, 29, 29);
+  margin-top: 20px;
 
-  &:first-child {
-    margin-top: 40px;
-  }
-  &:last-child {
-    margin-top: 20px;
-  }
+  // &:last-child {
+  //   margin-top: 20px;
+  // }
 
   & input {
     &:active, &:focus {
@@ -135,6 +141,7 @@ opacity: 1;
 
 .validation__buttons {
   display: flex;
+  margin-top: 40px;
 }
 
 .login__button {

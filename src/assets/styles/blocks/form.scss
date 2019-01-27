@@ -9,7 +9,10 @@
   align-items: center;
   margin-bottom: 70px;
   text-align: center;
-  // z-index: 50;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  
   &-title {
     color: $text-color;
   }
