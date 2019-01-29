@@ -64,6 +64,8 @@
   resize: none;
   padding-left: 20px;
 
+  // display: none;
+
   @include phones {
     width: 95%;
   }
